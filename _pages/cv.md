@@ -42,6 +42,7 @@ Work experience
 * Spring 2020: Teaching Assistant
   * Ethics in the Development of Information Science and Technologies, SIST, ShanghaiTech University
   * Supervisor: Professor Lifeng Yang
+  
 Skills
 ======
 * Languages: Mandarin Chinese(Native Speaker), English (C1)
