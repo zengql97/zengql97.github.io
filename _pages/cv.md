@@ -11,49 +11,44 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Major in Computer Science, in School of Information Science and Technology, ShanghaiTech University, 2020 (expected)
+* Minor in Finance, in School of Entrepreneurship and Management, ShanghaiTech University, 2020 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2018-Now: Research Assistant
+  * ShanghaiTech University
+  * Duties included: Collecting Data, Helping in Economics Experiments
+  * Supervisor: Professor Peiyao Shen
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2018-2019: Research Assistant
+  * ShanghaiTech University
+  * Duties included: Collecting Data
+  * Supervisor: Professor Guangwei Li
+
+* 2019-Now: Research Assistant
+  * AR-Lab, ShanghaiTech University
+  * Duties included: Collecting Data, Carrying Out Experiments, Building Empirical Models
+  * Supervisor: Professor Lifeng Yang
   
+* Spring 2019: Teaching Assistant
+  * Data Structure and Algorithm, SIST, ShanghaiTech University
+  * Supervisor: Professor Jingyi Yu, Dengji Zhao
+
+* Summer 2019: Teaching Assistant
+  * Web and Text Mining, SIST, ShanghaiTech University
+  * Supervisor: Professor Yilu Zhou(From Fordham University)
+
+* Spring 2020: Teaching Assistant
+  * Ethics in the Development of Information Science and Technologies, SIST, ShanghaiTech University
+  * Supervisor: Professor Lifeng Yang
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages: Mandarin Chinese(Native Speaker), English (C1)
+* Programming Languages: Python, R, C++, Matlab, Latex.
+* Web Crawling
+* Z-Tree and O-Tree
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
+
+
