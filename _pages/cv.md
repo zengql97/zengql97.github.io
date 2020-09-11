@@ -11,26 +11,11 @@ redirect_from:
 
 Education
 ======
-* Major in Computer Science, in School of Information Science and Technology, ShanghaiTech University, 2020 (expected)
-* Minor in Finance, in School of Entrepreneurship and Management, ShanghaiTech University, 2020 (expected)
+* Major in Computer Science, in School of Information Science and Technology, ShanghaiTech University, 2020 
+* Minor in Finance, in School of Entrepreneurship and Management, ShanghaiTech University, 2020
 
 Work experience
 ======
-* 2018-Now: Research Assistant
-  * ShanghaiTech University
-  * Duties included: Collecting Data, Helping in Economics Experiments
-  * Supervisor: Professor Peiyao Shen
-
-* 2018-2019: Research Assistant
-  * ShanghaiTech University
-  * Duties included: Collecting Data
-  * Supervisor: Professor Guangwei Li
-
-* 2019-Now: Research Assistant
-  * AR-Lab, ShanghaiTech University
-  * Duties included: Collecting Data, Carrying Out Experiments, Building Empirical Models
-  * Supervisor: Professor Lifeng Yang
-  
 * Spring 2019: Teaching Assistant
   * Data Structure and Algorithm, SIST, ShanghaiTech University
   * Supervisor: Professor Jingyi Yu, Dengji Zhao
