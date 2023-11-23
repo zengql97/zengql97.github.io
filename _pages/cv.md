@@ -16,7 +16,7 @@ redirect_from:
 
 ## Working Paper
 - "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio and Video Analysis," with *Sandeep Chandukala*, *Lifeng Yang*, and *Hai Che*
-- "Distinctiveness from Concept to Application:Unpacking its Influence and Dynamics on User Engagement in Online Real Estate Portal", with *Sandeep Chandukala*, *Ernst Osinga*
+- "Distinctiveness from Concept to Application: Unpacking its Influence and Dynamics on User Engagement in Online Real Estate Portal", with *Sandeep Chandukala*, *Ernst Osinga*
 
 ## Presentations
 - "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio And Video Analysis," presented at Marketing Science, June 2023
