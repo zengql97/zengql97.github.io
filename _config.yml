@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Qingli Zeng"
   avatar           : "profile.jpg"
-  bio              : "Ph.D. Student in LKCBS, Singapore Management University"
+  bio              : "Ph.D. Student in LKCBS, SMU"
   location         : "Singapore"
   employer         :
   pubmed           : 
   googlescholar    : 
-  email            :
+  email            : "qingli.zeng.2020@pbs.smu.edu.sg"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "zengql97"
+  github           : 
   google_plus      :
   keybase          :
   instagram        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          : "qingli_zeng"
   vine             :
   weibo            :
   xing             :
