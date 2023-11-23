@@ -18,7 +18,7 @@ redirect_from:
 - "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio and Video Analysis," with *Sandeep Chandukala*, *Lifeng Yang*, and *Hai Che*
 
 # Presentations
-- "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio And Video Analysis," presented at Marketing Science, upcoming in June 2023
+- "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio And Video Analysis," presented at Marketing Science, June 2023
 
 # Work Experience
 - Teaching Assistant, Consumer Analytics, Singapore Management University, Summer 2021, Supervisor: Professor Sandeep R. Chandukala
