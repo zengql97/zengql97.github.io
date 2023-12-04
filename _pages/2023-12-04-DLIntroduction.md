@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "Welcome to Jekyll!"
+---
+
 # Introduction to Deep Learning
 
 ### **Motivation for Deep Learning**
