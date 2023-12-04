@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Introduction to Deep Learning"
 ---
 
 # Introduction to Deep Learning
