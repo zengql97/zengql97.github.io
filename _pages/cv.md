@@ -9,31 +9,55 @@ redirect_from:
 
 {% include base_path %}
 
-## Education
-- Ph.D. in Business (Marketing), SMU, 2025 (Expected)
-- B.S. in Computer Science, ShanghaiTech, 2020 (Dean's List 2017)
-  - Minor in Finance
+# Qingli Zeng
 
-## Working Paper
-- "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio and Video Analysis," with *Sandeep Chandukala*, *Lifeng Yang*, and *Hai Che*
-- "Distinctiveness from Concept to Application: Unpacking its Influence and Dynamics on User Engagement in Online Real Estate Portal", with *Sandeep Chandukala*, *Ernst Osinga*
+## Education
+### Ph.D. in Business (Marketing)
+**Singapore Management University (SMU), Singapore**  
+*Expected 2025*  
+*Research Focus:* Quant Marketing; Machine Learning Application; Data Science; Video Analysis; Image Analysis; NLP
+
+### B.S. in Computer Science
+**ShanghaiTech University, Shanghai, China**  
+*2020*  
+- Dean's List (2017)  
+- Minor: Finance
+
+## Working Papers
+- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
+  Co-authors: Sandeep Chandukala, Lifeng Yang, Hai Che  
+- **Image Distinctiveness**  
+  Co-authors: Sandeep Chandukala, Ernst Osinga
 
 ## Presentations
-- "Role Of Anchor Emotions On Audience Engagement and Revenue: Evidence From Live Streaming Audio And Video Analysis," presented at Marketing Science, June 2023
+- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
+  Marketing Science Conference, June 2023
 
 ## Work Experience
-- Teaching Assistant, Consumer Analytics, SMU, 2021
-- Teaching Assistant, Business Analytics, SMU, 2022
-- Teaching Assistant, Marketing Analytics, SMU, 2022 - 2024
-- Teaching Assistant, Ethics in the Development of Information Science and Technologies, ShanghaiTech, 2020
-- Teaching Assistant, Data Structure and Algorithm, ShanghaiTech, 2019
-- Teaching Assistant, Web and Text Mining, ShanghaiTech, 2019
+### Teaching Assistant, Singapore Management University (SMU), Singapore
+- Consumer Analytics (2021)  
+- Business Analytics (2022)  
+- Marketing Analytics (2022 - 2024)  
+
+### Teaching Assistant, ShanghaiTech University, Shanghai, China
+- Ethics in the Development of Information Science and Technologies (2020)  
+- Data Structure and Algorithm (2019)  
+- Web and Text Mining (2019)
 
 ## Skills & Certificates
-- Google Data Analytics Professional Certificate (Issued Jan 2022)
-- British Council: Effective Communication Skills
-- SMU: Effective Communication Skills for Graduate Instructors
-- Languages: Mandarin Chinese (Native), English (Fluent, C2), Cantonese (Basic Knowledge)
-- Programming Languages: Python, R, C++, Matlab, Latex
-- Web Crawling
-- Experimental Economics: Z-Tree and O-Tree
+- **Certificates**:  
+  - Google Data Analytics Professional Certificate (Issued Jan 2022)  
+  - British Council: Effective Communication Skills  
+  - SMU: Effective Communication Skills for Graduate Instructors  
+
+- **Languages**:  
+  - Mandarin Chinese (Native)  
+  - English (Fluent, C2)  
+  - Cantonese (Basic Knowledge)  
+
+- **Programming Languages**:  
+  - Python, R, C++, Matlab, Latex  
+
+- **Other Skills**:  
+  - Web Crawling  
+  - Experimental Economics (Z-Tree and O-Tree)
