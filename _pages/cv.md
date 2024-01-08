@@ -23,11 +23,12 @@ redirect_from:
 - Dean's List (2017)  
 - Minor: Finance
 
+## Manuscript Under Review
+- **Zeng, Qingli**, Sandeep Chandukala, Ernst Osinga (2024), "Image Distinctiveness", under review, **Information Systems Research**
+
 ## Working Papers
-- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
-  Co-authors: Sandeep Chandukala, Lifeng Yang, Hai Che  
-- **Image Distinctiveness**  
-  Co-authors: Sandeep Chandukala, Ernst Osinga
+- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**,with Sandeep Chandukala, Lifeng Yang, Hai Che  
+
 
 ## Presentations
 - **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
