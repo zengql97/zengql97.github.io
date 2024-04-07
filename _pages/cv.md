@@ -24,10 +24,11 @@ redirect_from:
 - Minor: Finance
 
 ## Manuscript Under Review
-- **Zeng, Qingli**, Sandeep Chandukala, Ernst Osinga (2024), "Image Distinctiveness", under review, **Information Systems Research**
+ under review, **Information Systems Research**
 
 ## Working Papers
-- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**,with Sandeep Chandukala, Lifeng Yang, Hai Che  
+- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**, with Sandeep Chandukala, Lifeng Yang, Hai Che  
+- **Image Distinctiveness**, with Sandeep Chandukala, Ernst Osinga 
 
 
 ## Presentations
