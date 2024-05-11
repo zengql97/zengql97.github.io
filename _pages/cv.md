@@ -23,8 +23,8 @@ redirect_from:
 - Dean's List (2017)  
 - Minor: Finance
 
-## Manuscript Under Review
- under review, **Information Systems Research**
+<!-- ## Manuscript Under Review
+ under review, **Information Systems Research** -->
 
 ## Working Papers
 - **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**, with Sandeep Chandukala, Lifeng Yang, Hai Che  
@@ -55,10 +55,10 @@ redirect_from:
 - **Languages**:  
   - Mandarin Chinese (Native)  
   - English (Fluent, C2)  
-  - Cantonese (Basic Knowledge)  
+  - Cantonese(Basic Knowledge)  
 
 - **Programming Languages**:  
-  - Python, R, C++, Matlab, Latex  
+  - Python, R, C++, Rust, Matlab, Latex  
 
 - **Other Skills**:  
   - Web Crawling  
