@@ -38,6 +38,8 @@ Omitted
 
 ### Lecturer,Singapore Management University (SMU), Singapore
 - Undergraduate: Marketing Analytics (Scheduled, Aug 2024)
+
+
 ### Teaching Assistant, Singapore Management University (SMU), Singapore
 - Marketing Analytics (2022 - 2024)  
 - Business Analytics (2022)  
