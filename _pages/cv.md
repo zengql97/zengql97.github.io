@@ -27,19 +27,22 @@ redirect_from:
  under review, **Information Systems Research** -->
 
 ## Working Papers
-- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**, with Sandeep Chandukala, Lifeng Yang, Hai Che  
-- **Image Distinctiveness**, with Sandeep Chandukala, Ernst Osinga 
-
-
+Omitted
 ## Presentations
 - **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
-  Marketing Science Conference, June 2023
+  ISMS Marketing Science Conference, June 2023
+- **Image Distinctiveness**  
+  ISMS Marketing Science Conference, June 2024
+  
+## Teaching Experience
 
-## Work Experience
+### Lecturer,Singapore Management University (SMU), Singapore
+- Undergraduate: Marketing Analytics (Scheduled, Aug 2024)
 ### Teaching Assistant, Singapore Management University (SMU), Singapore
-- Consumer Analytics (2021)  
-- Business Analytics (2022)  
 - Marketing Analytics (2022 - 2024)  
+- Business Analytics (2022)  
+- Consumer Analytics (2021) 
+
 
 ### Teaching Assistant, ShanghaiTech University, Shanghai, China
 - Ethics in the Development of Information Science and Technologies (2020)  
