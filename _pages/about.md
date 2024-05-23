@@ -8,9 +8,6 @@ redirect_from:
   - /about.html
 ---
 
+Hello, I'm Qingli. I'm currently a PhD candidate in Business at SMU, specializing in quantitative marketing. My research primarily explores how machine learning—especially techniques for processing unstructured data like text, images, and audio—can deepen our understanding of consumer behavior in digital environments. My projects focus on the applications of AI and machine learning to analyze online word-of-mouth, such as reviews, and the empirical modeling of user-generated content impacts. Additionally, I am passionate about developing innovative metrics and methodological tools that managers can use to enhance decision-making.
 
-Hello there, I'm Qingli, currently pursuing my Ph.D. in Business at SMU. My research primarily focuses on quantitative marketing, where I explore the fascinating realms of machine learning and data analysis, particularly in handling unstructured data like text and images.
-
-Beyond that, I'm passionate about several important areas, including sustainability, public policy, and issues related to the LGBTQA community and gender in marketing. I strongly believe in the power of marketing as a tool for driving social justice.
-
-I'm on an exciting research journey in the world of Marketing, with an expected graduation in 2025. Thank you for taking the time to visit my page!
+I am on the 2024-2025 marketing job market.
