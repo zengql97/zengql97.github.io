@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Qingli Zeng"
 title_separator          : "-"
 name                     : &name "Qingli Zeng"
-description              : &description "Ph.D. Student @Singapore Management University"
+description              : &description "Ph.D. in Business from Singapore Management University"
 url                      : https://zengql97.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "zengql97.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Qingli Zeng"
   avatar           : "profile.jpg"
-  bio              : "Ph.D. Student in LKCBS, SMU"
+  bio              : "Ph.D. in Business (Marketing)"
   location         : "Singapore"
   employer         :
   pubmed           : 
