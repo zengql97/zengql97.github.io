@@ -14,7 +14,7 @@ redirect_from:
 ## Education
 ### Ph.D. in Business (Marketing)
 **Singapore Management University (SMU), Singapore**  
-*Expected 2025*  
+*2025*  
 *Research Focus:* Quant Marketing; Machine Learning Application; Data Science; Video Analysis; Image Analysis; NLP
 
 ### B.S. in Computer Science
@@ -22,9 +22,6 @@ redirect_from:
 *2020*  
 - Dean's List (2017)  
 - Minor: Finance
-
-<!-- ## Manuscript Under Review
- under review, **Information Systems Research** -->
 
 ## Working Papers
 Omitted
@@ -37,7 +34,7 @@ Omitted
 ## Teaching Experience
 
 ### Lecturer,Singapore Management University (SMU), Singapore
-- Undergraduate: Marketing Analytics (Scheduled, Aug 2024)
+- Undergraduate: Marketing Analytics (Aug 2024 - Dec 2024)
 
 
 ### Teaching Assistant, Singapore Management University (SMU), Singapore
@@ -50,6 +47,18 @@ Omitted
 - Ethics in the Development of Information Science and Technologies (2020)  
 - Data Structure and Algorithm (2019)  
 - Web and Text Mining (2019)
+
+
+## Research Grant 
+- Exploring the Role of Image Distinctiveness in Online Search Behavior, ASEAN Business Research Initiative (ABRI), CKGSB and SMU, S$7,800
+
+## Scholarships and Awards
+- Dr. Srinivas K. Reddy Research Award, Singapore Management University (2024)
+- AMA Sheth Foundation Doctoral Consortium Fellow (2024)
+- ISMS Doctoral Consortium Fellow
+- Doctoral Fellowship, LKCSB, Singapore Management University (2020 - 2024)
+- Dean's List (2017)
+
 
 ## Skills & Certificates
 - **Certificates**:  
