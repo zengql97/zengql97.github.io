@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Lecturer (Assistant Professor) in the [School of Business Administration](https://en.huji.ac.il/business) at the **Hebrew University of Jerusalem**.
+I am a Lecturer (Assistant Professor) in the [School of Business Administration](https://bschool-en.huji.ac.il/) at the **Hebrew University of Jerusalem**.
 
 My research lies at the intersection of **quantitative marketing** and **machine learning**. I work with unstructured data — text, images, audio, and video — to study consumer behavior and help managers make more informed decisions. I am particularly interested in how the aesthetic and emotional dimensions of user-generated content shape engagement and economic outcomes.
 
