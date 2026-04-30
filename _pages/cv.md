@@ -15,7 +15,7 @@ redirect_from:
 
 ### Lecturer (Assistant Professor), Hebrew University of Jerusalem (HUJI), Israel
 *July 2026 – present*  
-School of Business Administration
+School of Business
 
 ### Lecturer, Singapore Management University (SMU), Singapore
 *August 2024 – December 2024*  
