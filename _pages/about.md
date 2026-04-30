@@ -1,11 +1,17 @@
 ---
 permalink: /
-title: "About me"
+title: "About"
 excerpt: "About me"
-author_profile: true
-redirect_from: 
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I am a quantitative marketing researcher with a PhD from Singapore Management University (SMU). My work lies at the intersection of machine learning and consumer behavior, where I specialize in analyzing unstructured data like text, images, and audio. I develop novel methods to measure the impact of user-generated content (such as online reviews) and create data-driven tools to help managers make more strategic decisions.
+I am a Lecturer (Assistant Professor) in the [School of Business Administration](https://en.huji.ac.il/business) at the **Hebrew University of Jerusalem**.
+
+My research lies at the intersection of **quantitative marketing** and **machine learning**. I work with unstructured data — text, images, audio, and video — to study consumer behavior and help managers make more informed decisions. I am particularly interested in how the aesthetic and emotional dimensions of user-generated content shape engagement and economic outcomes.
+
+I received my Ph.D. in Business (Marketing) from [Singapore Management University](https://www.smu.edu.sg), where I was a Doctoral Fellow at the Lee Kong Chian School of Business.
+
+**Research interests:** Quantitative Marketing &nbsp;·&nbsp; Computer Vision &nbsp;·&nbsp; NLP &nbsp;·&nbsp; Audio & Video Analysis &nbsp;·&nbsp; Online Reviews &nbsp;·&nbsp; Consumer Behavior

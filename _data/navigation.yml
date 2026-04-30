@@ -1,9 +1,8 @@
-# main links links
+# main links
 main:
+  - title: "Research"
+    url: /publications/
+  - title: "Writing"
+    url: /writing/
   - title: "CV"
     url: /cv/
-  - title: "Posts"
-    url: /posts/
-    
-
-    

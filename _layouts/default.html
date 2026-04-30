@@ -1,31 +1,47 @@
 ---
-layout: compress
 ---
-
-{% include base_path %}
-
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<html lang="en">
   <head>
-    {% include head.html %}
-    {% include head/custom.html %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
   </head>
-
   <body>
+    <div class="wrapper">
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+      <header class="site-header">
+        <img src="/images/profile.jpg" alt="{{ site.author.name }}">
+        <div class="site-header-info">
+          <h1>{{ site.author.name }}</h1>
+          <div class="position">
+            Lecturer, <a href="https://en.huji.ac.il/business">School of Business Administration</a><br>
+            Hebrew University of Jerusalem
+          </div>
+          <div class="contact">
+            <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          </div>
+        </div>
+      </header>
 
-    {{ content }}
+      <nav>
+        <a href="/"            {% if page.url == "/" %}class="active"{% endif %}>home</a>
+        <a href="/publications/" {% if page.url contains "/publications" %}class="active"{% endif %}>research</a>
+        <a href="/writing/"    {% if page.url contains "/writing" or page.url contains "/posts" %}class="active"{% endif %}>writing</a>
+        <a href="/teaching/"   {% if page.url contains "/teaching" %}class="active"{% endif %}>teaching</a>
+        <a href="/cv/"         {% if page.url contains "/cv" %}class="active"{% endif %}>cv</a>
+      </nav>
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
+      <main>
+        {{ content }}
+      </main>
+
     </div>
-
-    {% include scripts.html %}
-
   </body>
 </html>

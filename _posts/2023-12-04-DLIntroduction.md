@@ -1,6 +1,8 @@
 ---
 layout: post
-title:  "Introduction to Deep Learning"
+title: "Introduction to Deep Learning"
+date: 2023-12-04
+tags: [machine learning]
 ---
 
 # Introduction to Deep Learning

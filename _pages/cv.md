@@ -11,69 +11,76 @@ redirect_from:
 
 # Qingli Zeng
 
+## Academic Positions
+
+### Lecturer (Assistant Professor), Hebrew University of Jerusalem (HUJI), Israel
+*July 2026 – present*  
+School of Business Administration
+
+### Lecturer, Singapore Management University (SMU), Singapore
+*August 2024 – December 2024*  
+Undergraduate course: Marketing Analytics
+
+---
+
 ## Education
+
 ### Ph.D. in Business (Marketing)
 **Singapore Management University (SMU), Singapore**  
 *2025*  
-*Research Focus:* Quant Marketing; Machine Learning Application; Data Science; Video Analysis; Image Analysis; NLP
+*Research Focus:* Quantitative Marketing; Machine Learning; Computer Vision; NLP; Audio & Video Analysis
 
 ### B.S. in Computer Science
 **ShanghaiTech University, Shanghai, China**  
 *2020*  
-- Dean's List (2017)  
-- Minor: Finance
+Dean's List (2017) · Minor: Finance
 
-## Working Papers
-Omitted
-## Presentations
+---
+
+## Research
+
+Working papers available upon request.
+
+### Conference Presentations
 - **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
   ISMS Marketing Science Conference, June 2023
 - **Image Distinctiveness**  
   ISMS Marketing Science Conference, June 2024
-  
-## Teaching Experience
 
-### Lecturer,Singapore Management University (SMU), Singapore
-- Undergraduate: Marketing Analytics (Aug 2024 - Dec 2024)
+---
 
+## Teaching
 
 ### Teaching Assistant, Singapore Management University (SMU), Singapore
-- Marketing Analytics (2022 - 2024)  
-- Business Analytics (2022)  
-- Consumer Analytics (2021) 
-
+- Marketing Analytics (2022 – 2024)
+- Business Analytics (2022)
+- Consumer Analytics (2021)
 
 ### Teaching Assistant, ShanghaiTech University, Shanghai, China
-- Ethics in the Development of Information Science and Technologies (2020)  
-- Data Structure and Algorithm (2019)  
+- Ethics in the Development of Information Science and Technologies (2020)
+- Data Structure and Algorithm (2019)
 - Web and Text Mining (2019)
 
+---
 
-## Research Grant 
-- Exploring the Role of Image Distinctiveness in Online Search Behavior, ASEAN Business Research Initiative (ABRI), CKGSB and SMU, S$7,800
+## Grants, Scholarships & Awards
 
-## Scholarships and Awards
+- **Research Grant:** Exploring the Role of Image Distinctiveness in Online Search Behavior, ASEAN Business Research Initiative (ABRI), CKGSB and SMU — S$7,800
 - Dr. Srinivas K. Reddy Research Award, Singapore Management University (2024)
 - AMA Sheth Foundation Doctoral Consortium Fellow (2024)
 - ISMS Doctoral Consortium Fellow
-- Doctoral Fellowship, LKCSB, Singapore Management University (2020 - 2024)
-- Dean's List (2017)
+- Doctoral Fellowship, LKCSB, Singapore Management University (2020 – 2024)
+- Dean's List, ShanghaiTech University (2017)
 
+---
 
-## Skills & Certificates
-- **Certificates**:  
-  - Google Data Analytics Professional Certificate (Issued Jan 2022)  
-  - British Council: Effective Communication Skills  
-  - SMU: Effective Communication Skills for Graduate Instructors  
+## Skills
 
-- **Languages**:  
-  - Mandarin Chinese (Native)  
-  - English (Fluent, C2)  
-  - Cantonese(Basic Knowledge)  
+**Programming:** Python · R · C++ · Rust · Matlab · LaTeX
 
-- **Programming Languages**:  
-  - Python, R, C++, Rust, Matlab, Latex  
+**Languages:** Mandarin Chinese (Native) · English (Fluent, C2) · Cantonese (Basic)
 
-- **Other Skills**:  
-  - Web Crawling  
-  - Experimental Economics (Z-Tree and O-Tree)
+**Certificates:**
+- Google Data Analytics Professional Certificate (Jan 2022)
+- British Council: Effective Communication Skills
+- SMU: Effective Communication Skills for Graduate Instructors

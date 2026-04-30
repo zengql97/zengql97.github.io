@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Qingli Zeng"
 title_separator          : "-"
 name                     : &name "Qingli Zeng"
-description              : &description "Ph.D. in Business from Singapore Management University"
+description              : &description "Quantitative Marketing Researcher | Incoming Lecturer at Hebrew University of Jerusalem"
 url                      : https://zengql97.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "zengql97.github.io"
@@ -81,9 +81,9 @@ analytics:
 # Site Author
 author:
   name             : "Qingli Zeng"
-  avatar           : "profile.jpg"
-  bio              : "Ph.D. in Business (Marketing)"
-  location         : "Singapore"
+  avatar           : "bio-photo.jpg"
+  bio              : "Incoming Lecturer, Hebrew University of Jerusalem. Ph.D. in Business (Marketing), SMU."
+  location         : "Jerusalem, Israel (from July 2026)"
   employer         :
   pubmed           : 
   googlescholar    : 
@@ -248,7 +248,8 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
+  quiet_deps: true
 
 
 # Outputting

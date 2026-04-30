@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.tags.size > 0 %} &nbsp;·&nbsp; {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}{% endif %}</p>
+{{ content }}
