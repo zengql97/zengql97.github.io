@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchors' Voice Characteristics and Viewer Engagement in Live Streams — Qingli Zeng, EMAC 2026</title>
+<meta name="description" content="EMAC 2026 talk on how Twitch anchors' voice features (expressive energy, stressed tones, cognitive tones) drive viewer engagement.">
+<style>
+  :root {
+    --bg:        #0F1115;
+    --fg:        #E8E8EC;
+    --dim:       #7E7E88;
+    --hair:      #2A2D35;
+    --ink:       #F5F5F7;
+    --accent:    #FF6B6B;
+    --card:      #15171C;
+    --serif:     'Iowan Old Style', 'Apple Garamond', 'Baskerville', 'Times New Roman', Georgia, serif;
+    --sans:      -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --mono:      'SF Mono', Menlo, Consolas, 'Roboto Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 18px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body { padding-bottom: 6rem; }
+
+  /* ---------- Slide container ---------- */
+  .slide {
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--hair);
+  }
+  .slide:last-of-type { border-bottom: none; }
+  .slide-num {
+    position: absolute;
+    bottom: 1.6rem;
+    right: 3rem;
+    font-size: 0.8rem;
+    color: var(--dim);
+    letter-spacing: 0.05em;
+  }
+
+  /* ---------- Typography ---------- */
+  h1, h2, h3 { color: var(--ink); font-weight: 700; letter-spacing: -0.01em; }
+  h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 0.8em; }
+  h2 { font-size: 2rem; line-height: 1.2; margin-bottom: 1em; }
+  h3 { font-size: 1.3rem; margin-bottom: 0.6em; }
+  .h2-dim {
+    color: var(--dim);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-left: 0.4em;
+    letter-spacing: -0.01em;
+  }
+  p { margin-bottom: 1em; max-width: 60ch; }
+  .lead { font-size: 1.4rem; line-height: 1.4; max-width: 30ch; color: var(--ink); }
+  .dim { color: var(--dim); }
+  .hi  { color: var(--accent); }
+  .ink { color: var(--ink); font-weight: 600; }
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--dim);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.6em;
+  }
+  .bignum {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3em;
+  }
+  .divider {
+    width: 4rem;
+    height: 1px;
+    background: var(--hair);
+    border: none;
+    margin: 1.4em 0;
+  }
+  ul.bullets { list-style: none; max-width: 60ch; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.6em;
+    color: var(--dim);
+  }
+  ul.bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+  }
+  ol.numbered {
+    list-style: none;
+    counter-reset: step;
+    max-width: 60ch;
+  }
+  ol.numbered > li {
+    counter-increment: step;
+    margin-bottom: 1.2em;
+    position: relative;
+    padding-left: 2.5em;
+  }
+  ol.numbered > li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--dim);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85em;
+    letter-spacing: 0.05em;
+  }
+  ol.numbered > li strong { color: var(--ink); font-weight: 600; }
+  ol.numbered > li .sub { color: var(--dim); font-size: 0.92em; display: block; margin-top: 0.25em; }
+
+  /* ---------- Grids ---------- */
+  .cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .cols-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  /* ---------- Tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.4em 0;
+    font-size: 0.95rem;
+  }
+  thead th {
+    text-align: left;
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom: 1px solid var(--hair);
+    padding: 0.8em 1em 0.8em 0;
+  }
+  thead th.dim-head { color: var(--dim); font-weight: 400; }
+  tbody td {
+    padding: 0.9em 1em 0.9em 0;
+    border-bottom: 1px solid var(--hair);
+    color: var(--fg);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: 1px solid var(--hair); }
+  td.dim { color: var(--dim); }
+  td.center, th.center { text-align: center; }
+  .table-thick tbody td { padding: 1.1em 1em 1.1em 0; }
+
+  /* ---------- Title slide ---------- */
+  .title-slide {
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .title-slide h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    max-width: 20ch;
+    margin-bottom: 1.6em;
+  }
+  .title-slide .conf {
+    font-size: 0.85rem;
+    color: var(--dim);
+    letter-spacing: 0.1em;
+    margin-bottom: 2em;
+  }
+  .title-slide .author {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---------- Media ---------- */
+  .figure {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background: var(--card);
+  }
+
+  /* ---------- Interactive annotated image ---------- */
+  .anno-wrap {
+    position: relative;
+    max-width: 100%;
+    margin: 1rem 0 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #000;
+  }
+  .anno-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .anno-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .anno-overlay g {
+    opacity: 0;
+    transform: scale(0.6);
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+  }
+  .anno-overlay g.shown {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .anno-overlay g .ring {
+    fill: none;
+    stroke-width: 4;
+  }
+  .anno-overlay g .label {
+    fill: #ffffff;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 28px;
+    paint-order: stroke;
+    stroke: #000;
+    stroke-width: 6;
+    stroke-linejoin: round;
+  }
+  .anno-hint {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(15,17,21,0.85);
+    color: var(--fg);
+    padding: 0.5em 0.9em;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--hair);
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .anno-hint.hidden { opacity: 0; }
+  .anno-progress {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;
+    pointer-events: none;
+  }
+  .anno-progress .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    transition: background 0.3s;
+  }
+  .anno-progress .dot.on { background: var(--accent); }
+  .anno-explain {
+    margin-top: 0.8rem;
+    min-height: 3em;
+    padding: 1em 1.2em;
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-left: 3px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.3s, opacity 0.3s;
+    opacity: 0.4;
+  }
+  .anno-explain.active {
+    opacity: 1;
+  }
+  .anno-explain .role {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--ink);
+    margin-right: 0.4em;
+  }
+  .anno-explain .body {
+    color: var(--dim);
+  }
+
+  .demo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+  }
+  .demo {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    border-radius: 6px;
+    padding: 1.2em;
+  }
+  .demo-label {
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+  .demo-sub {
+    color: var(--dim);
+    font-size: 0.88em;
+    margin-bottom: 0.8em;
+  }
+  .demo video,
+  .demo audio {
+    width: 100%;
+    border-radius: 4px;
+    background: #000;
+  }
+  .demo audio { background: transparent; }
+  .demo img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.6em;
+    border-radius: 4px;
+  }
+
+  /* ---------- Diagrams ---------- */
+  .system-diagram {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    align-items: center;
+  }
+  .node {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    padding: 1.2em 1em;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .node-title { color: var(--ink); font-weight: 600; }
+  .node-sub { color: var(--dim); font-size: 0.85em; margin-top: 0.3em; }
+  .node-accent { border-color: var(--accent); }
+
+  .framework {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 1.2rem;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .framework .arrow {
+    color: var(--dim);
+    font-size: 1.4rem;
+  }
+  .framework-box {
+    background: var(--card);
+    border: 1px solid var(--hair);
+    padding: 1em;
+    border-radius: 4px;
+  }
+  .framework-box .label {
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 0.4em;
+  }
+  .framework-box ul {
+    list-style: none;
+  }
+  .framework-box li {
+    color: var(--dim);
+    font-size: 0.88em;
+    margin-bottom: 0.2em;
+  }
+
+  /* ---------- Hypotheses block ---------- */
+  .hypothesis {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    align-items: baseline;
+    margin-bottom: 1em;
+    max-width: 60ch;
+  }
+  .hypothesis .num {
+    color: var(--dim);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85em;
+    letter-spacing: 0.08em;
+  }
+
+  /* ---------- Equation ---------- */
+  .equation {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    text-align: center;
+    margin: 1.6em 0 2em;
+    color: var(--ink);
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5em;
+  }
+  .equation .sub { font-size: 0.7em; vertical-align: -0.3em; font-style: normal; }
+  .equation .op { color: var(--dim); margin: 0 0.2em; }
+
+  /* ---------- Stress paradox callout ---------- */
+  .callout {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--ink);
+    max-width: 30ch;
+    margin: 1.6em 0;
+    font-weight: 500;
+  }
+
+  /* ---------- Thank you ---------- */
+  .thanks-slide {
+    text-align: left;
+    justify-content: center;
+  }
+  .thanks-slide h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1em;
+  }
+  .thanks-slide a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .thanks-slide a:hover {
+    border-bottom-color: var(--accent);
+  }
+
+  /* ---------- Progress bar ---------- */
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--accent);
+    width: 0;
+    z-index: 100;
+    transition: width 0.1s linear;
+  }
+
+  /* ---------- Nav hint ---------- */
+  .nav-hint {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: var(--dim);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 700px) {
+    body { font-size: 16px; }
+    .slide { padding: 4rem 1.6rem 3rem; }
+    .slide-num { right: 1.6rem; }
+    h1 { font-size: 2rem; }
+    .title-slide h1 { font-size: 2.3rem; }
+    .thanks-slide h1 { font-size: 2.8rem; }
+    h2 { font-size: 1.5rem; }
+    .lead { font-size: 1.15rem; }
+    .bignum { font-size: 2rem; }
+    .cols-2, .cols-3, .system-diagram, .framework, .demo-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .framework .arrow { display: none; }
+    .equation { font-size: 0.95rem; white-space: normal; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="nav-hint">↓ scroll · ←→ keys</div>
+
+<!-- ============ 1. TITLE ============ -->
+<section class="slide title-slide" id="s1">
+  <div class="conf">EMAC 2026 · DIGITAL MARKETING &amp; SOCIAL MEDIA TRACK</div>
+  <h1>Anchors' Voice Characteristics and Viewer Engagement in Live Streams</h1>
+  <p>
+    <span class="author">Qingli Zeng</span>
+    <span class="dim">  with co-authors Sandeep Chandukala, Hai Che, Lifeng Yang</span>
+    <br>
+    <span class="dim">Hebrew University of Jerusalem</span>
+  </p>
+</section>
+
+<!-- ============ 2. THE PUZZLE ============ -->
+<section class="slide" id="s2">
+  <h2>The puzzle</h2>
+  <p class="lead">
+    In live streaming, the anchor's <span class="hi">voice</span> is the only continuous channel of communication.
+  </p>
+
+  <ul class="bullets">
+    <li>Hands are on the game — no text chat</li>
+    <li>Face cam is small, often partially obscured</li>
+    <li>Yet creators earn millions in subscriptions</li>
+  </ul>
+
+  <p class="lead" style="margin-top:2em;">
+    How does <span class="hi"><em>how they speak</em></span> — not what they show — drive viewer engagement?
+  </p>
+  <div class="slide-num">02</div>
+</section>
+
+<!-- ============ 3. WHY IT MATTERS ============ -->
+<section class="slide" id="s3">
+  <h2>Why it matters</h2>
+  <div class="cols-2">
+    <div>
+      <div class="bignum">$20B+</div>
+      <p class="dim">global live-streaming market, growing 25% YoY</p>
+      <hr class="divider">
+      <div class="bignum">6–7 figures</div>
+      <p class="dim">annual subscription earnings for top streamers</p>
+    </div>
+    <div>
+      <div class="bignum">3 platforms</div>
+      <p class="dim">Twitch, YouTube Gaming, and Kick competing fiercely</p>
+      <hr class="divider">
+      <div class="bignum">0 papers</div>
+      <p class="dim">isolating vocal cues from other engagement drivers</p>
+    </div>
+  </div>
+  <div class="slide-num">03</div>
+</section>
+
+<!-- ============ 4. ECOSYSTEM (interactive) ============ -->
+<section class="slide" id="s4">
+  <h2>The live-streaming ecosystem</h2>
+
+  <div class="anno-wrap" id="annoWrap">
+    <img src="media/image1.png" alt="Twitch stream interface showing anchor face cam, gameplay video, and chat panel">
+    <!-- SVG viewBox matches image resolution 1919x1079 -->
+    <svg class="anno-overlay" viewBox="0 0 1919 1079" preserveAspectRatio="none">
+      <!-- 1. Anchor -->
+      <g data-i="0">
+        <ellipse class="ring" cx="502" cy="181" rx="115" ry="125" stroke="#22c55e"/>
+        <text class="label" x="382" y="100" text-anchor="middle">Anchor</text>
+      </g>
+      <!-- 2. Video Game -->
+      <g data-i="1">
+        <ellipse class="ring" cx="834" cy="449" rx="320" ry="220" stroke="#f59e0b"/>
+        <text class="label" x="428" y="472" text-anchor="middle">Video Game</text>
+      </g>
+      <!-- 3. Chats -->
+      <g data-i="2">
+        <ellipse class="ring" cx="1690" cy="548" rx="220" ry="430" stroke="#3b82f6"/>
+        <text class="label" x="1778" y="103" text-anchor="middle">Chats</text>
+      </g>
+      <!-- 4. Sponsors (ring on ThatsRoje username) -->
+      <g data-i="3">
+        <circle class="ring" cx="1514" cy="469" r="30" stroke="#fb923c" stroke-width="5"/>
+        <text class="label" x="1725" y="482" text-anchor="middle">Sponsors</text>
+      </g>
+      <!-- 5. Free riders (ring on aantrosish username) -->
+      <g data-i="4">
+        <circle class="ring" cx="1481" cy="587" r="30" stroke="#ec4899" stroke-width="5"/>
+        <text class="label" x="1739" y="602" text-anchor="middle">Free riders</text>
+      </g>
+    </svg>
+
+    <div class="anno-hint" id="annoHint">CLICK TO REVEAL →</div>
+
+    <div class="anno-progress" id="annoProgress">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <div class="anno-explain" id="annoExplain">
+    <span class="role" style="color:var(--dim)">Click the image →</span>
+    <span class="body">step through each part of the live-streaming ecosystem.</span>
+  </div>
+
+  <div class="slide-num">04</div>
+</section>
+
+<script>
+  (function() {
+    const explanations = [
+      { role: 'Anchor',      color: '#22c55e', body: 'The streamer — the central performer whose voice is the only continuous channel of communication with viewers.' },
+      { role: 'Video Game',  color: '#f59e0b', body: 'The gameplay footage dominates the screen. Unlike traditional broadcasts, anchors compete with this visually engaging content for attention.' },
+      { role: 'Chats',       color: '#3b82f6', body: 'Real-time messages from viewers — our measure of immediate, impulsive engagement.' },
+      { role: 'Sponsors',    color: '#fb923c', body: 'Subscribers paying recurring fees — sustained financial commitment, our second engagement outcome.' },
+      { role: 'Free riders', color: '#ec4899', body: 'Non-paying viewers who chat without subscribing — represent the bulk of the audience and shape collective sentiment.' },
+    ];
+
+    const wrap = document.getElementById('annoWrap');
+    if (!wrap) return;
+    const groups = wrap.querySelectorAll('.anno-overlay g');
+    const dots = document.querySelectorAll('#annoProgress .dot');
+    const hint = document.getElementById('annoHint');
+    const explain = document.getElementById('annoExplain');
+    let step = 0;
+
+    wrap.addEventListener('click', () => {
+      if (step >= groups.length) {
+        groups.forEach(g => g.classList.remove('shown'));
+        dots.forEach(d => d.classList.remove('on'));
+        explain.classList.remove('active');
+        explain.querySelector('.role').textContent = 'Click the image →';
+        explain.querySelector('.role').style.color = 'var(--dim)';
+        explain.querySelector('.body').textContent = 'step through each part of the live-streaming ecosystem.';
+        explain.style.borderLeftColor = 'transparent';
+        hint.classList.remove('hidden');
+        step = 0;
+        return;
+      }
+      groups[step].classList.add('shown');
+      dots[step].classList.add('on');
+      hint.classList.add('hidden');
+      const ex = explanations[step];
+      explain.classList.add('active');
+      explain.querySelector('.role').textContent = ex.role;
+      explain.querySelector('.role').style.color = ex.color;
+      explain.querySelector('.body').textContent = ex.body;
+      explain.style.borderLeftColor = ex.color;
+      step++;
+    });
+  })();
+</script>
+
+<!-- ============ 5. TWO KINDS OF ENGAGEMENT ============ -->
+<section class="slide" id="s5">
+  <h2>Two kinds of engagement</h2>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Immediate <span class="dim" style="font-weight:400">— Chats</span></th>
+        <th>Sustained <span class="dim" style="font-weight:400">— Subscriptions</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="dim">What</td>
+        <td>Real-time messages</td>
+        <td>Paid recurring commitment</td>
+      </tr>
+      <tr>
+        <td class="dim">Nature</td>
+        <td>Impulsive, social</td>
+        <td>Deliberate, financial</td>
+      </tr>
+      <tr>
+        <td class="dim">Drives</td>
+        <td>Community vibe</td>
+        <td>Revenue, loyalty</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top:1em;">
+    These are <span class="hi">not the same thing.</span>
+    <span class="dim">They likely respond to different vocal cues.</span>
+  </p>
+  <div class="slide-num">05</div>
+</section>
+
+<!-- ============ 6. FRAMEWORK ============ -->
+<section class="slide" id="s6">
+  <h2>Framework</h2>
+  <div class="framework">
+    <div class="framework-box">
+      <div class="label">Anchor vocal characteristics</div>
+      <ul>
+        <li>Expressive Energy</li>
+        <li>Stressed Tones</li>
+        <li>Cognitive Tones</li>
+      </ul>
+    </div>
+    <div class="arrow">→</div>
+    <div class="framework-box">
+      <div class="label">Audience reaction</div>
+      <ul>
+        <li>Chatroom sentiment</li>
+        <li>Sponsor sentiment</li>
+        <li>Free-rider sentiment</li>
+      </ul>
+    </div>
+    <div class="arrow">→</div>
+    <div class="framework-box">
+      <div class="label">Engagement</div>
+      <ul>
+        <li>Chats (immediate)</li>
+        <li>Subscriptions (sustained)</li>
+      </ul>
+    </div>
+  </div>
+  <p class="dim" style="margin-top:1.5em;">Video content controls (within- and across-scene dynamics) sit alongside as exogenous controls.</p>
+  <div class="slide-num">06</div>
+</section>
+
+<!-- ============ 7. THEORETICAL FRAMEWORK ============ -->
+<section class="slide" id="s7">
+  <h2>Theoretical framework</h2>
+  <p style="max-width:60ch;">
+    <span class="ink">Social Approval Theory</span>
+    <span class="dim"> — Bundy &amp; Pfarrer (2015)</span>
+  </p>
+  <p class="dim" style="max-width:60ch; margin-top:-0.4em;">
+    Emotional appeals receive higher evaluations
+    <span style="color:var(--fg)"> → </span>
+    drives <span class="hi">sustained commitment</span>.
+  </p>
+  <hr class="divider">
+  <p style="max-width:60ch;">
+    <span class="ink">Social Influence Theory</span>
+    <span class="dim"> — Cialdini (2006)</span>
+  </p>
+  <p class="dim" style="max-width:60ch; margin-top:-0.4em;">
+    Persuasion effects depend on social context
+    <span style="color:var(--fg)"> → </span>
+    drives <span class="hi">moderation</span>.
+  </p>
+  <p class="dim" style="margin-top:2em; max-width:60ch;">
+    Together: different vocal cues map to different engagement types — and the social environment shifts these effects.
+  </p>
+  <div class="slide-num">07</div>
+</section>
+
+<!-- ============ 8. THREE VOCAL DIMENSIONS ============ -->
+<section class="slide" id="s8">
+  <h2>Three vocal dimensions</h2>
+  <div class="cols-3">
+    <div>
+      <div class="eyebrow">Dimension 01</div>
+      <h3>Expressive<br>Energy</h3>
+      <p class="dim">enthusiasm,<br>emotional intensity</p>
+    </div>
+    <div>
+      <div class="eyebrow">Dimension 02</div>
+      <h3>Stressed<br>Tones</h3>
+      <p class="dim">tension, pressure,<br>audible effort</p>
+    </div>
+    <div>
+      <div class="eyebrow">Dimension 03</div>
+      <h3>Cognitive<br>Tones</h3>
+      <p class="dim">analytical thinking,<br>information processing</p>
+    </div>
+  </div>
+  <p style="margin-top:2.5em;"><span class="dim">Each carries a distinct social signal.</span></p>
+  <div class="slide-num">08</div>
+</section>
+
+<!-- ============ 9. VAR DEF: ENERGY ============ -->
+<section class="slide" id="s9">
+  <div class="eyebrow">Variable definition</div>
+  <h2>Energy</h2>
+  <p style="max-width:60ch;">
+    Anchor's <span class="ink">vocal energy</span> — enthusiasm, loudness range, and pitch
+    dynamics in the audio signal.
+  </p>
+
+  <div class="demo-grid">
+    <div class="demo">
+      <div class="demo-label">Low energy example</div>
+      <div class="demo-sub">Flat, low-affect delivery</div>
+      <audio controls preload="metadata">
+        <source src="media/media1.m4a" type="audio/mp4">
+        Your browser doesn't support audio playback.
+      </audio>
+    </div>
+    <div class="demo">
+      <div class="demo-label">High energy example</div>
+      <div class="demo-sub">Peak excitement, intense affect</div>
+      <audio controls preload="metadata">
+        <source src="media/media2.m4a" type="audio/mp4">
+        Your browser doesn't support audio playback.
+      </audio>
+    </div>
+  </div>
+
+  <p class="dim" style="margin-top:1em;">
+    Aggregated per minute from second-level audio measurements; standardized within streamer to remove baseline differences.
+  </p>
+  <div class="slide-num">09</div>
+</section>
+
+<!-- ============ 10. VAR DEF: STRESS ============ -->
+<section class="slide" id="s10">
+  <div class="eyebrow">Variable definition</div>
+  <h2>Stress Level</h2>
+  <p style="max-width:60ch;">
+    Audible <span class="ink">vocal stress</span> — indexed from jitter, shimmer, voice quality
+    irregularities, and prosodic markers of tension.
+  </p>
+
+  <div class="demo-grid">
+    <div class="demo">
+      <div class="demo-label">Low stress example</div>
+      <div class="demo-sub">Relaxed, controlled phonation</div>
+      <video controls preload="metadata" playsinline>
+        <source src="media/media3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="demo">
+      <div class="demo-label">High stress example</div>
+      <div class="demo-sub">High tension, audible effort</div>
+      <video controls preload="metadata" playsinline>
+        <source src="media/media4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <p class="dim" style="margin-top:1em;">
+    Interpreted as a signal of authenticity / emotional investment — see Finding 02.
+  </p>
+  <div class="slide-num">10</div>
+</section>
+
+<!-- ============ 12. HYPOTHESES ============ -->
+<section class="slide" id="s12">
+  <h2>Hypotheses</h2>
+  <ol class="numbered">
+    <li>Expressive Energy <span class="dim">→</span> <span class="hi">subscriptions</span>, not chats</li>
+    <li>Stressed tones <span class="dim">→</span> <span class="hi">both</span> chats and subs <span class="dim">(authenticity signal)</span></li>
+    <li>Cognitive depth <span class="dim">→</span> <span class="hi">subscriptions</span> <span class="dim">(competence signal)</span></li>
+    <li><span class="dim">Channel popularity moderates</span> <span class="dim">(halo for validated anchors)</span></li>
+    <li><span class="dim">Chatroom sentiment moderates</span> <span class="dim">(positive vibe = less need for anchor energy)</span></li>
+  </ol>
+  <div class="slide-num">11</div>
+</section>
+
+<!-- ============ 12. DATA ============ -->
+<section class="slide" id="s13">
+  <h2>Data</h2>
+  <div class="cols-2">
+    <div>
+      <div class="bignum">Top 25</div>
+      <p class="dim">streamers, ~35% of platform viewership</p>
+      <hr class="divider">
+      <div class="bignum">1,000+ h</div>
+      <p class="dim">of streaming content</p>
+    </div>
+    <div>
+      <div class="eyebrow">Modalities</div>
+      <ul class="bullets">
+        <li>Audio at 40,000 Hz</li>
+        <li>HD video</li>
+        <li>Chat logs <span class="dim">(timestamped)</span></li>
+        <li>Subscription records <span class="dim">(timestamped)</span></li>
+      </ul>
+      <div class="eyebrow" style="margin-top:1.5em;">Panel structure</div>
+      <p>streamer <span class="dim">×</span> stream <span class="dim">×</span> minute</p>
+    </div>
+  </div>
+  <div class="slide-num">12</div>
+</section>
+
+<!-- ============ 13. EMPIRICAL MODEL ============ -->
+<section class="slide" id="s14">
+  <h2>Empirical model</h2>
+  <p><span class="ink">Negative Binomial</span> <span class="dim">regression with</span>
+     <span class="ink">Gaussian Copula</span> <span class="dim">endogeneity correction</span></p>
+
+  <div class="equation">
+    μ<span class="sub">i,t</span>
+    <span class="op">=</span> β<span class="sub">A</span>·Audio<span class="sub">i,t−1</span>
+    <span class="op">+</span> β<span class="sub">M</span>·Mod<span class="sub">i,t−1</span>
+    <span class="op">+</span> β<span class="sub">I</span>·(Audio × Mod)
+    <span class="op">+</span> β<span class="sub">C</span>·Controls<span class="sub">i,t−1</span>
+    <span class="op">+</span> λ<span class="sub">i</span>
+    <span class="op">+</span> ε<span class="sub">i,t</span>
+  </div>
+
+  <div class="cols-2" style="margin-top:1.5em;">
+    <div>
+      <div class="eyebrow">Controls</div>
+      <p class="dim">Video dynamics, visual attributes, audio quality, lagged outcomes, anchor fixed effects.</p>
+    </div>
+    <div>
+      <div class="eyebrow">Why copula</div>
+      <p class="dim">Addresses reverse causality (viewers shape anchor's voice) without needing an external instrument.</p>
+    </div>
+  </div>
+  <div class="slide-num">13</div>
+</section>
+
+<!-- ============ 14. FINDING 1 ============ -->
+<section class="slide" id="s15">
+  <h2>Finding 01 <span class="h2-dim">— engagement is not unidimensional</span></h2>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th>Vocal cue</th>
+        <th class="center dim-head">→ Chats</th>
+        <th class="center dim-head">→ Subscriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Expressive Energy</td>
+        <td class="center dim">ns</td>
+        <td class="center hi"><strong>+</strong></td>
+      </tr>
+      <tr>
+        <td>Stressed</td>
+        <td class="center hi"><strong>+</strong></td>
+        <td class="center hi"><strong>+</strong></td>
+      </tr>
+      <tr>
+        <td>Cognitive</td>
+        <td class="center dim">ns</td>
+        <td class="center hi"><strong>+</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top:1.5em;">
+    Chats and subscriptions <span class="hi">don't share the same drivers.</span>
+  </p>
+  <p class="dim">Anchors can't optimize one strategy for "engagement" as a single goal.</p>
+  <div class="slide-num">14</div>
+</section>
+
+<!-- ============ 15. FINDING 2 ============ -->
+<section class="slide" id="s16">
+  <h2>Finding 02 <span class="h2-dim">— the stress paradox</span></h2>
+  <p class="dim">Contrary to intuition:</p>
+  <div class="callout">
+    Stressed vocal tones <span class="hi">positively</span> affect engagement, both <span class="hi">chats</span> and <span class="hi">subscriptions</span>.
+  </div>
+  <p style="margin-top:1em;">
+    <strong>Interpretation.</strong> Stress in the voice signals
+    <span class="hi">authenticity</span> and <span class="hi">emotional investment</span>.
+  </p>
+  <p class="dim">In a polished media landscape, audible effort is a credibility marker.</p>
+  <div class="slide-num">15</div>
+</section>
+
+<!-- ============ 16. FINDING 3 ============ -->
+<section class="slide" id="s17">
+  <h2>Finding 03 <span class="h2-dim">— social context matters</span></h2>
+  <div class="eyebrow">Channel popularity moderates</div>
+  <ul class="bullets">
+    <li><strong>Amplifies</strong> Energy → Subs <span class="dim">(popular = trusted = energy more persuasive)</span></li>
+    <li><strong>Dampens</strong> Energy → Chats <span class="dim">(large crowds chat regardless)</span></li>
+    <li><strong>Dampens</strong> Stress → Subs <span class="dim">(established audiences want polish for paid commitment)</span></li>
+  </ul>
+  <div class="eyebrow" style="margin-top:1.8em;">Chatroom sentiment moderates</div>
+  <ul class="bullets">
+    <li>Positive sentiment <strong>dampens</strong> Energy → Subs <span class="dim">(less need for anchor effort)</span></li>
+  </ul>
+  <p style="margin-top:1.5em;">Vocal strategy should <span class="hi">adapt to context</span>, not be one-size-fits-all.</p>
+  <div class="slide-num">16</div>
+</section>
+
+<!-- ============ 17. STRATEGIC RECS ============ -->
+<section class="slide" id="s18">
+  <h2>Strategic recommendations</h2>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th>Audience</th>
+        <th>Strategy</th>
+        <th class="dim-head">Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>New anchors</td>
+        <td>Match sentiment</td>
+        <td class="dim">Sentiment amplifies energy → engagement for small audiences</td>
+      </tr>
+      <tr>
+        <td>Established anchors</td>
+        <td>Differentiate</td>
+        <td class="dim">Popular channels chat themselves; reserve energy for conversion</td>
+      </tr>
+      <tr>
+        <td>All anchors</td>
+        <td>Leverage stress carefully</td>
+        <td class="dim">Stress drives engagement, but excess tension hurts subs in big channels</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="slide-num">17</div>
+</section>
+
+<!-- ============ 18. REPLICATION DATA ============ -->
+<section class="slide" id="s19">
+  <h2>New since submission <span class="h2-dim">— replication data</span></h2>
+  <div class="cols-2">
+    <div>
+      <div class="eyebrow">New wave</div>
+      <p>Nov 2025 <span class="dim">—</span> Jan 2026</p>
+      <hr class="divider">
+      <div class="bignum">1,138</div>
+      <p class="dim">Twitch VODs, ~22 TB of video</p>
+      <hr class="divider">
+      <div class="eyebrow">Storage</div>
+      <p class="dim">AWS S3; per-minute panel structure preserved</p>
+    </div>
+    <div>
+      <div class="eyebrow">Purpose</div>
+      <ul class="bullets">
+        <li>Demonstrate findings generalize over time</li>
+        <li>Pre-empt reviewer concerns about a single time window</li>
+        <li>Enable response to new variable requests <span class="dim">(e.g., visual semantics)</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-num">18</div>
+</section>
+
+<!-- ============ 19. METHODOLOGY UPGRADE ============ -->
+<section class="slide" id="s20">
+  <h2>Methodology upgrade</h2>
+  <p class="dim">From proprietary closed-box to open-source, fully reproducible pipeline.</p>
+  <table class="table-thick" style="font-size:0.9rem;">
+    <thead>
+      <tr>
+        <th>Construct</th>
+        <th class="dim-head">Original</th>
+        <th>New</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Audio features</td>
+        <td class="dim">Nemesysco QA5</td>
+        <td><span class="hi">openSMILE eGeMAPSv02</span> <span class="dim">(88 features)</span></td>
+      </tr>
+      <tr>
+        <td>Video dynamics</td>
+        <td class="dim">SSIM only</td>
+        <td>SSIM + scene detection + <span class="hi">CLIP embeddings</span></td>
+      </tr>
+      <tr>
+        <td>Audio quality</td>
+        <td class="dim">MOSNet</td>
+        <td>SQUIM + LUFS + voice activity + SNR</td>
+      </tr>
+      <tr>
+        <td>Linguistic controls</td>
+        <td class="dim">Chat sentiment</td>
+        <td>+ transcript: speech rate, hesitations, lexical diversity, F–K grade</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top:1em;"><span class="dim">Transparent, replicable, finer-grained, extensible.</span></p>
+  <div class="slide-num">19</div>
+</section>
+
+<!-- ============ 20. THEORETICAL CONTRIBUTIONS ============ -->
+<section class="slide" id="s21">
+  <h2>Theoretical contributions</h2>
+  <ol class="numbered">
+    <li>
+      <strong>Engagement is multidimensional</strong>
+      <span class="sub">Different psychological pathways for different behaviors.</span>
+    </li>
+    <li>
+      <strong>Stress is not always negative</strong>
+      <span class="sub">It can function as an authenticity signal in digital communication.</span>
+    </li>
+    <li>
+      <strong>Social Approval and Social Influence work together</strong>
+      <span class="sub">Main effects plus contextual moderation.</span>
+    </li>
+    <li>
+      <strong>A methodological template</strong>
+      <span class="sub">For analyzing multimodal interactions in digital settings.</span>
+    </li>
+  </ol>
+  <div class="slide-num">20</div>
+</section>
+
+<!-- ============ 21. LIMITATIONS & FUTURE ============ -->
+<section class="slide" id="s22">
+  <h2>Limitations &amp; future research</h2>
+  <div class="cols-2">
+    <div>
+      <div class="eyebrow">Limitations</div>
+      <ul class="bullets">
+        <li>Top-25 streamers — long tail</li>
+        <li>Single platform <span class="dim">(Twitch)</span></li>
+        <li>Single category <span class="dim">(gaming)</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">In progress</div>
+      <ul class="bullets">
+        <li>Replication on 2025–26 wave</li>
+        <li>Per-minute facial semantics <span class="dim">(CLIP)</span></li>
+        <li>Cross-category generalization</li>
+        <li>Live broadcast vs. VOD viewer differences</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-num">21</div>
+</section>
+
+<!-- ============ 22. THANK YOU ============ -->
+<section class="slide thanks-slide" id="s23">
+  <h1>Thank you.</h1>
+  <p>
+    <span class="author">Qingli Zeng</span>
+    <span class="dim">  ·  Hebrew University of Jerusalem</span>
+  </p>
+  <p style="margin-top:0.6em;">
+    <a href="mailto:Qingli.Zeng@mail.huji.ac.il">Qingli.Zeng@mail.huji.ac.il</a>
+  </p>
+</section>
+
+<script>
+  // Scroll progress bar
+  const progress = document.getElementById('progress');
+  function updateProgress() {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  // Keyboard navigation between slides
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  function currentSlide() {
+    const mid = window.scrollY + window.innerHeight / 2;
+    let best = 0, bestDist = Infinity;
+    slides.forEach((s, i) => {
+      const center = s.offsetTop + s.offsetHeight / 2;
+      const d = Math.abs(center - mid);
+      if (d < bestDist) { bestDist = d; best = i; }
+    });
+    return best;
+  }
+  document.addEventListener('keydown', (e) => {
+    const i = currentSlide();
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault();
+      const next = slides[Math.min(i + 1, slides.length - 1)];
+      next.scrollIntoView({ behavior: 'smooth' });
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault();
+      const prev = slides[Math.max(i - 1, 0)];
+      prev.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+</body>
+</html>

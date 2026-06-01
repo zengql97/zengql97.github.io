@@ -122,6 +122,8 @@ include:
   - .htaccess
   - _pages
   - files
+  - media
+  - slides.html
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

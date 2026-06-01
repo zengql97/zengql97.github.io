@@ -34,6 +34,7 @@
         <a href="/"            {% if page.url == "/" %}class="active"{% endif %}>home</a>
         <a href="/publications/" {% if page.url contains "/publications" %}class="active"{% endif %}>research</a>
         <a href="/writing/"    {% if page.url contains "/writing" or page.url contains "/posts" %}class="active"{% endif %}>writing</a>
+        <a href="/slides/"     {% if page.url contains "/slides" %}class="active"{% endif %}>slides</a>
         <a href="/teaching/"   {% if page.url contains "/teaching" %}class="active"{% endif %}>teaching</a>
         <a href="/cv/"         {% if page.url contains "/cv" %}class="active"{% endif %}>cv</a>
       </nav>
