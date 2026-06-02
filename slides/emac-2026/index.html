@@ -23,8 +23,8 @@
     background: var(--bg);
     color: var(--fg);
     font-family: var(--sans);
-    font-size: 18px;
-    line-height: 1.55;
+    font-size: 21px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
@@ -34,9 +34,9 @@
   /* ---------- Slide container ---------- */
   .slide {
     min-height: 100vh;
-    max-width: 1100px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 6rem 3rem 4rem;
+    padding: 7rem 3rem 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,23 +55,23 @@
 
   /* ---------- Typography ---------- */
   h1, h2, h3 { color: var(--ink); font-weight: 700; letter-spacing: -0.01em; }
-  h1 { font-size: 2.8rem; line-height: 1.15; margin-bottom: 0.8em; }
-  h2 { font-size: 2rem; line-height: 1.2; margin-bottom: 1em; }
-  h3 { font-size: 1.3rem; margin-bottom: 0.6em; }
+  h1 { font-size: 3.2rem; line-height: 1.15; margin-bottom: 0.8em; }
+  h2 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1em; }
+  h3 { font-size: 1.5rem; margin-bottom: 0.6em; }
   .h2-dim {
     color: var(--dim);
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-left: 0.4em;
     letter-spacing: -0.01em;
   }
   p { margin-bottom: 1em; max-width: 60ch; }
-  .lead { font-size: 1.4rem; line-height: 1.4; max-width: 30ch; color: var(--ink); }
+  .lead { font-size: 1.65rem; line-height: 1.45; max-width: 28ch; color: var(--ink); }
   .dim { color: var(--dim); }
   .hi  { color: var(--accent); }
   .ink { color: var(--ink); font-weight: 600; }
   .eyebrow {
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     letter-spacing: 0.18em;
     color: var(--dim);
     text-transform: uppercase;
@@ -79,7 +79,7 @@
     margin-bottom: 0.6em;
   }
   .bignum {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: var(--ink);
     line-height: 1.1;
@@ -177,7 +177,7 @@
     min-height: 100vh;
   }
   .title-slide h1 {
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     line-height: 1.1;
     max-width: 20ch;
     margin-bottom: 1.6em;
@@ -442,7 +442,7 @@
     justify-content: center;
   }
   .thanks-slide h1 {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     margin-bottom: 1em;
   }
   .thanks-slide a {
@@ -482,15 +482,15 @@
 
   /* ---------- Mobile ---------- */
   @media (max-width: 700px) {
-    body { font-size: 16px; }
+    body { font-size: 17px; }
     .slide { padding: 4rem 1.6rem 3rem; }
     .slide-num { right: 1.6rem; }
-    h1 { font-size: 2rem; }
-    .title-slide h1 { font-size: 2.3rem; }
-    .thanks-slide h1 { font-size: 2.8rem; }
-    h2 { font-size: 1.5rem; }
-    .lead { font-size: 1.15rem; }
-    .bignum { font-size: 2rem; }
+    h1 { font-size: 2.2rem; }
+    .title-slide h1 { font-size: 2.6rem; }
+    .thanks-slide h1 { font-size: 3.2rem; }
+    h2 { font-size: 1.8rem; }
+    .lead { font-size: 1.25rem; }
+    .bignum { font-size: 2.4rem; }
     .cols-2, .cols-3, .system-diagram, .framework, .demo-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
