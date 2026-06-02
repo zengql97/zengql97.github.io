@@ -16,7 +16,7 @@ My research examines consumer behavior through unstructured data — text, image
 ## Conference Presentations
 
 - **Anchors' Voice Characteristics and Viewer Engagement in Live Streams**  
-  EMAC 2026 · Digital Marketing & Social Media Track &nbsp;·&nbsp; [slides](/slides/emac-2026/)
+  EMAC 2026 · Digital Marketing & Social Media Track &nbsp;·&nbsp; [slides](/slides/emac-2026.html)
 
 - **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
   ISMS Marketing Science Conference, June 2023
