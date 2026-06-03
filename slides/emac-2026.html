@@ -112,7 +112,6 @@
   ol.numbered {
     list-style: none;
     counter-reset: step;
-   
   }
   ol.numbered > li {
     counter-increment: step;
@@ -296,18 +295,14 @@
     transition: border-color 0.3s, opacity 0.3s;
     opacity: 0.4;
   }
-  .anno-explain.active {
-    opacity: 1;
-  }
+  .anno-explain.active { opacity: 1; }
   .anno-explain .role {
     display: inline-block;
     font-weight: 700;
     color: var(--ink);
     margin-right: 0.4em;
   }
-  .anno-explain .body {
-    color: var(--dim);
-  }
+  .anno-explain .body { color: var(--dim); }
 
   .demo-grid {
     display: grid;
@@ -321,49 +316,13 @@
     border-radius: 6px;
     padding: 1.2em;
   }
-  .demo-label {
-    color: var(--ink);
-    font-weight: 600;
-    margin-bottom: 0.4em;
-  }
-  .demo-sub {
-    color: var(--dim);
-    font-size: 0.88em;
-    margin-bottom: 0.8em;
-  }
-  .demo video,
-  .demo audio {
-    width: 100%;
-    border-radius: 4px;
-    background: #000;
-  }
+  .demo-label { color: var(--ink); font-weight: 600; margin-bottom: 0.4em; }
+  .demo-sub { color: var(--dim); font-size: 0.88em; margin-bottom: 0.8em; }
+  .demo video, .demo audio { width: 100%; border-radius: 4px; background: #000; }
   .demo audio { background: transparent; }
-  .demo img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.6em;
-    border-radius: 4px;
-  }
+  .demo img { width: 100%; height: auto; margin-bottom: 0.6em; border-radius: 4px; }
 
   /* ---------- Diagrams ---------- */
-  .system-diagram {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    margin: 2rem 0;
-    align-items: center;
-  }
-  .node {
-    background: var(--card);
-    border: 1px solid var(--hair);
-    padding: 1.2em 1em;
-    text-align: center;
-    border-radius: 4px;
-  }
-  .node-title { color: var(--ink); font-weight: 600; }
-  .node-sub { color: var(--dim); font-size: 0.85em; margin-top: 0.3em; }
-  .node-accent { border-color: var(--accent); }
-
   .framework {
     display: grid;
     grid-template-columns: 1fr auto 1fr auto 1fr;
@@ -371,45 +330,16 @@
     align-items: center;
     margin: 2rem 0;
   }
-  .framework .arrow {
-    color: var(--dim);
-    font-size: 1.4rem;
-  }
+  .framework .arrow { color: var(--dim); font-size: 1.4rem; }
   .framework-box {
     background: var(--card);
     border: 1px solid var(--hair);
     padding: 1em;
     border-radius: 4px;
   }
-  .framework-box .label {
-    color: var(--ink);
-    font-weight: 600;
-    margin-bottom: 0.4em;
-  }
-  .framework-box ul {
-    list-style: none;
-  }
-  .framework-box li {
-    color: var(--dim);
-    font-size: 0.88em;
-    margin-bottom: 0.2em;
-  }
-
-  /* ---------- Hypotheses block ---------- */
-  .hypothesis {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1em;
-    align-items: baseline;
-    margin-bottom: 1em;
-   
-  }
-  .hypothesis .num {
-    color: var(--dim);
-    font-variant-numeric: tabular-nums;
-    font-size: 0.85em;
-    letter-spacing: 0.08em;
-  }
+  .framework-box .label { color: var(--ink); font-weight: 600; margin-bottom: 0.4em; }
+  .framework-box ul { list-style: none; }
+  .framework-box li { color: var(--dim); font-size: 0.88em; margin-bottom: 0.2em; }
 
   /* ---------- Equation ---------- */
   .equation {
@@ -426,40 +356,30 @@
   .equation .sub { font-size: 0.7em; vertical-align: -0.3em; font-style: normal; }
   .equation .op { color: var(--dim); margin: 0 0.2em; }
 
-  /* ---------- Stress paradox callout ---------- */
+  /* ---------- Callout ---------- */
   .callout {
     font-size: 1.5rem;
     line-height: 1.4;
     color: var(--ink);
-   
     margin: 1.6em 0;
     font-weight: 500;
   }
 
   /* ---------- Thank you ---------- */
-  .thanks-slide {
-    text-align: left;
-    justify-content: center;
-  }
-  .thanks-slide h1 {
-    font-size: 5.5rem;
-    margin-bottom: 1em;
-  }
+  .thanks-slide { text-align: left; justify-content: center; }
+  .thanks-slide h1 { font-size: 5.5rem; margin-bottom: 1em; }
   .thanks-slide a {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s;
   }
-  .thanks-slide a:hover {
-    border-bottom-color: var(--accent);
-  }
+  .thanks-slide a:hover { border-bottom-color: var(--accent); }
 
   /* ---------- Progress bar ---------- */
   .progress {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     height: 2px;
     background: var(--accent);
     width: 0;
@@ -470,8 +390,7 @@
   /* ---------- Nav hint ---------- */
   .nav-hint {
     position: fixed;
-    bottom: 1.5rem;
-    left: 1.5rem;
+    bottom: 1.5rem; left: 1.5rem;
     color: var(--dim);
     font-size: 0.7rem;
     letter-spacing: 0.1em;
@@ -491,10 +410,7 @@
     h2 { font-size: 1.8rem; }
     .lead { font-size: 1.25rem; }
     .bignum { font-size: 2.4rem; }
-    .cols-2, .cols-3, .system-diagram, .framework, .demo-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
+    .cols-2, .cols-3, .framework, .demo-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .framework .arrow { display: none; }
     .equation { font-size: 0.95rem; white-space: normal; }
   }
@@ -515,6 +431,7 @@
     <br>
     <span class="dim">Hebrew University of Jerusalem</span>
   </p>
+  <!-- SPEAKER NOTES: 30 sec hello & framing. "Today I'll show you how the way streamers SPEAK — not what's on their screen — drives two different kinds of viewer engagement, and how those effects depend on context." -->
 </section>
 
 <!-- ============ 2. THE PUZZLE ============ -->
@@ -523,16 +440,15 @@
   <p class="lead">
     In live streaming, the anchor's <span class="hi">voice</span> is the only continuous channel of communication.
   </p>
-
   <ul class="bullets">
     <li>Hands are on the game — no text chat</li>
     <li>Face cam is small, often partially obscured</li>
     <li>Yet creators earn millions in subscriptions</li>
   </ul>
-
   <p class="lead" style="margin-top:2em;">
     How does <span class="hi"><em>how they speak</em></span> — not what they show — drive viewer engagement?
   </p>
+  <!-- SPEAKER NOTES (~60 sec): Set up the setting. Anchors compete with gameplay for the screen, can't gesture, can't type. The voice is the ONLY persistent persuasive channel. So it's a clean test bed for vocal influence in a high-stakes market. -->
   <div class="slide-num">02</div>
 </section>
 
@@ -555,60 +471,48 @@
       <p class="dim">isolating vocal cues from other engagement drivers</p>
     </div>
   </div>
+  <!-- SPEAKER NOTES (~30 sec): Big market, high stakes, no academic answer yet. -->
   <div class="slide-num">03</div>
 </section>
 
 <!-- ============ 4. ECOSYSTEM (interactive) ============ -->
 <section class="slide" id="s4">
   <h2>The live-streaming ecosystem</h2>
-
   <div class="anno-wrap" id="annoWrap">
     <img src="emac-2026/media/image1.png" alt="Twitch stream interface showing anchor face cam, gameplay video, and chat panel">
-    <!-- SVG viewBox matches image resolution 1919x1079 -->
     <svg class="anno-overlay" viewBox="0 0 1919 1079" preserveAspectRatio="none">
-      <!-- 1. Anchor -->
       <g data-i="0">
         <ellipse class="ring" cx="502" cy="181" rx="115" ry="125" stroke="#22c55e"/>
         <text class="label" x="382" y="100" text-anchor="middle">Anchor</text>
       </g>
-      <!-- 2. Video Game -->
       <g data-i="1">
         <ellipse class="ring" cx="834" cy="449" rx="320" ry="220" stroke="#f59e0b"/>
         <text class="label" x="428" y="472" text-anchor="middle">Video Game</text>
       </g>
-      <!-- 3. Chats -->
       <g data-i="2">
         <ellipse class="ring" cx="1690" cy="548" rx="220" ry="430" stroke="#3b82f6"/>
         <text class="label" x="1778" y="103" text-anchor="middle">Chats</text>
       </g>
-      <!-- 4. Sponsors (ring on ThatsRoje username) -->
       <g data-i="3">
         <circle class="ring" cx="1514" cy="469" r="30" stroke="#fb923c" stroke-width="5"/>
         <text class="label" x="1725" y="482" text-anchor="middle">Sponsors</text>
       </g>
-      <!-- 5. Free riders (ring on aantrosish username) -->
       <g data-i="4">
         <circle class="ring" cx="1481" cy="587" r="30" stroke="#ec4899" stroke-width="5"/>
         <text class="label" x="1739" y="602" text-anchor="middle">Free riders</text>
       </g>
     </svg>
-
     <div class="anno-hint" id="annoHint">CLICK TO REVEAL →</div>
-
     <div class="anno-progress" id="annoProgress">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+      <div class="dot"></div><div class="dot"></div>
     </div>
   </div>
-
   <div class="anno-explain" id="annoExplain">
     <span class="role" style="color:var(--dim)">Click the image →</span>
     <span class="body">step through each part of the live-streaming ecosystem.</span>
   </div>
-
+  <!-- SPEAKER NOTES (~90 sec): Click through the 5 annotations live. -->
   <div class="slide-num">04</div>
 </section>
 
@@ -621,7 +525,6 @@
       { role: 'Sponsors',    color: '#fb923c', body: 'Subscribers paying recurring fees — sustained financial commitment, our second engagement outcome.' },
       { role: 'Free riders', color: '#ec4899', body: 'Non-paying viewers who chat without subscribing — represent the bulk of the audience and shape collective sentiment.' },
     ];
-
     const wrap = document.getElementById('annoWrap');
     if (!wrap) return;
     const groups = wrap.querySelectorAll('.anno-overlay g');
@@ -629,7 +532,6 @@
     const hint = document.getElementById('annoHint');
     const explain = document.getElementById('annoExplain');
     let step = 0;
-
     wrap.addEventListener('click', () => {
       if (step >= groups.length) {
         groups.forEach(g => g.classList.remove('shown'));
@@ -669,27 +571,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="dim">What</td>
-        <td>Real-time messages</td>
-        <td>Paid recurring commitment</td>
-      </tr>
-      <tr>
-        <td class="dim">Nature</td>
-        <td>Impulsive, social</td>
-        <td>Deliberate, financial</td>
-      </tr>
-      <tr>
-        <td class="dim">Drives</td>
-        <td>Community vibe</td>
-        <td>Revenue, loyalty</td>
-      </tr>
+      <tr><td class="dim">What</td><td>Real-time messages</td><td>Paid recurring commitment</td></tr>
+      <tr><td class="dim">Nature</td><td>Impulsive, social</td><td>Deliberate, financial</td></tr>
+      <tr><td class="dim">Drives</td><td>Community vibe</td><td>Revenue, loyalty</td></tr>
     </tbody>
   </table>
   <p style="margin-top:1em;">
     These are <span class="hi">not the same thing.</span>
     <span class="dim">They likely respond to different vocal cues.</span>
   </p>
+  <!-- SPEAKER NOTES (~45 sec): Central distinction. Most prior work bundles "engagement" into one variable. We separate them. -->
   <div class="slide-num">05</div>
 </section>
 
@@ -699,38 +590,28 @@
   <div class="framework">
     <div class="framework-box">
       <div class="label">Anchor vocal characteristics</div>
-      <ul>
-        <li>Expressive Energy</li>
-        <li>Stressed Tones</li>
-        <li>Cognitive Tones</li>
-      </ul>
+      <ul><li>Expressive Energy</li><li>Stressed Tones</li><li>Cognitive Tones</li></ul>
     </div>
     <div class="arrow">→</div>
     <div class="framework-box">
       <div class="label">Audience reaction</div>
-      <ul>
-        <li>Chatroom sentiment</li>
-        <li>Sponsor sentiment</li>
-        <li>Free-rider sentiment</li>
-      </ul>
+      <ul><li>Chatroom sentiment</li><li>Sponsor sentiment</li><li>Free-rider sentiment</li></ul>
     </div>
     <div class="arrow">→</div>
     <div class="framework-box">
       <div class="label">Engagement</div>
-      <ul>
-        <li>Chats (immediate)</li>
-        <li>Subscriptions (sustained)</li>
-      </ul>
+      <ul><li>Chats (immediate)</li><li>Subscriptions (sustained)</li></ul>
     </div>
   </div>
   <p class="dim" style="margin-top:1.5em;">Video content controls (within- and across-scene dynamics) sit alongside as exogenous controls.</p>
+  <!-- SPEAKER NOTES (~45 sec): Conceptual flow. Voice features → audience reaction → engagement. Video content is a control, not a cause. -->
   <div class="slide-num">06</div>
 </section>
 
 <!-- ============ 7. THEORETICAL FRAMEWORK ============ -->
 <section class="slide" id="s7">
   <h2>Theoretical framework</h2>
-  <p >
+  <p>
     <span class="ink">Social Approval Theory</span>
     <span class="dim"> — Bundy &amp; Pfarrer (2015)</span>
   </p>
@@ -740,7 +621,7 @@
     drives <span class="hi">sustained commitment</span>.
   </p>
   <hr class="divider">
-  <p >
+  <p>
     <span class="ink">Social Influence Theory</span>
     <span class="dim"> — Cialdini (2006)</span>
   </p>
@@ -752,6 +633,7 @@
   <p class="dim" style="margin-top:2em;">
     Together: different vocal cues map to different engagement types — and the social environment shifts these effects.
   </p>
+  <!-- SPEAKER NOTES (~60 sec): Two theoretical traditions. Approval Theory explains WHY emotional vocal cues should drive paid commitment. Influence Theory explains WHY effects vary by context. -->
   <div class="slide-num">07</div>
 </section>
 
@@ -776,6 +658,7 @@
     </div>
   </div>
   <p style="margin-top:2.5em;"><span class="dim">Each carries a distinct social signal.</span></p>
+  <!-- SPEAKER NOTES (~30 sec): Three theoretically grounded dimensions. Energy = enthusiasm. Stress = audible effort/tension. Cognitive = analytical depth. -->
   <div class="slide-num">08</div>
 </section>
 
@@ -783,18 +666,15 @@
 <section class="slide" id="s9">
   <div class="eyebrow">Variable definition</div>
   <h2>Energy</h2>
-  <p >
-    Anchor's <span class="ink">vocal energy</span> — enthusiasm, loudness range, and pitch
-    dynamics in the audio signal.
+  <p>
+    Anchor's <span class="ink">vocal energy</span> — enthusiasm, loudness range, and pitch dynamics in the audio signal.
   </p>
-
   <div class="demo-grid">
     <div class="demo">
       <div class="demo-label">Low energy example</div>
       <div class="demo-sub">Flat, low-affect delivery</div>
       <audio controls preload="metadata">
         <source src="emac-2026/media/media1.m4a" type="audio/mp4">
-        Your browser doesn't support audio playback.
       </audio>
     </div>
     <div class="demo">
@@ -802,14 +682,13 @@
       <div class="demo-sub">Peak excitement, intense affect</div>
       <audio controls preload="metadata">
         <source src="emac-2026/media/media2.m4a" type="audio/mp4">
-        Your browser doesn't support audio playback.
       </audio>
     </div>
   </div>
-
   <p class="dim" style="margin-top:1em;">
     Aggregated per minute from second-level audio measurements; standardized within streamer to remove baseline differences.
   </p>
+  <!-- SPEAKER NOTES (~75 sec): "Listen to this..." play LOW energy clip (~10 sec). "...and this..." play HIGH energy clip (~10 sec). "Same person, same setting, same game — but you can hear the difference." -->
   <div class="slide-num">09</div>
 </section>
 
@@ -817,11 +696,9 @@
 <section class="slide" id="s10">
   <div class="eyebrow">Variable definition</div>
   <h2>Stress Level</h2>
-  <p >
-    Audible <span class="ink">vocal stress</span> — indexed from jitter, shimmer, voice quality
-    irregularities, and prosodic markers of tension.
+  <p>
+    Audible <span class="ink">vocal stress</span> — indexed from jitter, shimmer, voice quality irregularities, and prosodic markers of tension.
   </p>
-
   <div class="demo-grid">
     <div class="demo">
       <div class="demo-label">Low stress example</div>
@@ -838,15 +715,15 @@
       </video>
     </div>
   </div>
-
   <p class="dim" style="margin-top:1em;">
     Interpreted as a signal of authenticity / emotional investment — see Finding 02.
   </p>
+  <!-- SPEAKER NOTES (~75 sec): "Now stress. Listen to this..." play LOW stress (~10 sec). "...vs this..." play HIGH stress (~10 sec). -->
   <div class="slide-num">10</div>
 </section>
 
-<!-- ============ 12. HYPOTHESES ============ -->
-<section class="slide" id="s12">
+<!-- ============ 11. HYPOTHESES ============ -->
+<section class="slide" id="s11">
   <h2>Hypotheses</h2>
   <ol class="numbered">
     <li>Expressive Energy <span class="dim">→</span> <span class="hi">subscriptions</span>, not chats</li>
@@ -855,11 +732,12 @@
     <li><span class="dim">Channel popularity moderates</span> <span class="dim">(halo for validated anchors)</span></li>
     <li><span class="dim">Chatroom sentiment moderates</span> <span class="dim">(positive vibe = less need for anchor energy)</span></li>
   </ol>
+  <!-- SPEAKER NOTES (~45 sec): Energy and cognition drive deliberate behaviors (subs). Stress is special — authenticity signal that drives BOTH. And we expect the social context to moderate. -->
   <div class="slide-num">11</div>
 </section>
 
 <!-- ============ 12. DATA ============ -->
-<section class="slide" id="s13">
+<section class="slide" id="s12">
   <h2>Data</h2>
   <div class="cols-2">
     <div>
@@ -881,15 +759,15 @@
       <p>streamer <span class="dim">×</span> stream <span class="dim">×</span> minute</p>
     </div>
   </div>
+  <!-- SPEAKER NOTES (~45 sec): Top-25 anchors — 35% of all viewership. Over 1,000 hours of audio/video/chat/sub records. Per-minute panel. -->
   <div class="slide-num">12</div>
 </section>
 
 <!-- ============ 13. EMPIRICAL MODEL ============ -->
-<section class="slide" id="s14">
+<section class="slide" id="s13">
   <h2>Empirical model</h2>
   <p><span class="ink">Negative Binomial</span> <span class="dim">regression with</span>
      <span class="ink">Gaussian Copula</span> <span class="dim">endogeneity correction</span></p>
-
   <div class="equation">
     μ<span class="sub">i,t</span>
     <span class="op">=</span> β<span class="sub">A</span>·Audio<span class="sub">i,t−1</span>
@@ -899,7 +777,6 @@
     <span class="op">+</span> λ<span class="sub">i</span>
     <span class="op">+</span> ε<span class="sub">i,t</span>
   </div>
-
   <div class="cols-2" style="margin-top:1.5em;">
     <div>
       <div class="eyebrow">Controls</div>
@@ -910,11 +787,12 @@
       <p class="dim">Addresses reverse causality (viewers shape anchor's voice) without needing an external instrument.</p>
     </div>
   </div>
+  <!-- SPEAKER NOTES (~60 sec): NB regression because DVs are counts. Copula correction because viewers' reactions can influence the anchor's subsequent voice. -->
   <div class="slide-num">13</div>
 </section>
 
-<!-- ============ 14. FINDING 1 ============ -->
-<section class="slide" id="s15">
+<!-- ============ 14. FINDING 01 ============ -->
+<section class="slide" id="s14">
   <h2>Finding 01 <span class="h2-dim">— engagement is not unidimensional</span></h2>
   <table class="table-thick">
     <thead>
@@ -927,62 +805,144 @@
     <tbody>
       <tr>
         <td>Expressive Energy</td>
-        <td class="center dim">ns</td>
-        <td class="center hi"><strong>+</strong></td>
+        <td class="center dim">ns (β=0.0037)</td>
+        <td class="center hi"><strong>+</strong> β=0.0502***</td>
       </tr>
       <tr>
         <td>Stressed</td>
-        <td class="center hi"><strong>+</strong></td>
-        <td class="center hi"><strong>+</strong></td>
+        <td class="center hi"><strong>+</strong> β=0.0037***</td>
+        <td class="center hi"><strong>+</strong> β=0.0377***</td>
       </tr>
       <tr>
         <td>Cognitive</td>
-        <td class="center dim">ns</td>
-        <td class="center hi"><strong>+</strong></td>
+        <td class="center dim">ns (β=0.0118)</td>
+        <td class="center hi"><strong>+</strong> β=0.0440**</td>
       </tr>
     </tbody>
   </table>
-  <p style="margin-top:1.5em;">
-    Chats and subscriptions <span class="hi">don't share the same drivers.</span>
-  </p>
-  <p class="dim">Anchors can't optimize one strategy for "engagement" as a single goal.</p>
+  <p style="margin-top:1.5em;">Two distinct psychological pathways:</p>
+  <ul class="bullets">
+    <li><strong>Chats</strong> — impulsive, social → triggered only by <em>audible effort</em></li>
+    <li><strong>Subscriptions</strong> — deliberate, financial → require <em>energy + effort + competence</em></li>
+  </ul>
+  <p class="dim" style="margin-top:1em;">*** p&lt;0.01, ** p&lt;0.05 (baseline NB + copula, no interactions yet)</p>
+  <!-- SPEAKER NOTES (~75 sec): Walk through the table. Stress is the only cue that lights up BOTH columns. Energy and cognitive depth ONLY drive subs. Bundling them into one 'engagement' metric masks two very different mechanisms. -->
   <div class="slide-num">14</div>
 </section>
 
-<!-- ============ 15. FINDING 2 ============ -->
-<section class="slide" id="s16">
+<!-- ============ 15. FINDING 02 ============ -->
+<section class="slide" id="s15">
   <h2>Finding 02 <span class="h2-dim">— the stress paradox</span></h2>
   <p class="dim">Contrary to intuition:</p>
   <div class="callout">
-    Stressed vocal tones <span class="hi">positively</span> affect engagement, both <span class="hi">chats</span> and <span class="hi">subscriptions</span>.
+    Stressed vocal tones <span class="hi">positively</span> affect engagement, both <span class="hi">chats</span> (β=0.0037***) and <span class="hi">subscriptions</span> (β=0.0377***).
   </div>
   <p style="margin-top:1em;">
-    <strong>Interpretation.</strong> Stress in the voice signals
-    <span class="hi">authenticity</span> and <span class="hi">emotional investment</span>.
+    <strong>Why?</strong> Stress in the voice signals <span class="hi">authenticity</span> and <span class="hi">emotional investment</span>.
   </p>
-  <p class="dim">In a polished media landscape, audible effort is a credibility marker.</p>
+  <p class="dim">In an overproduced media landscape — autotuned songs, edited podcasts, curated content — <span class="ink">audible effort becomes a credibility marker</span>. Viewers reward anchors who sound like they actually care.</p>
+  <p class="dim"><em>This is the largest single coefficient on chats in our model.</em></p>
+  <!-- SPEAKER NOTES (~90 sec): The "stress paradox." In a media environment saturated with polished content, AUDIBLE EFFORT becomes a credibility signal. Viewers read strain as genuine investment. Rewarded with both chats AND subs. -->
   <div class="slide-num">15</div>
 </section>
 
-<!-- ============ 16. FINDING 3 ============ -->
-<section class="slide" id="s17">
-  <h2>Finding 03 <span class="h2-dim">— social context matters</span></h2>
-  <div class="eyebrow">Channel popularity moderates</div>
-  <ul class="bullets">
-    <li><strong>Amplifies</strong> Energy → Subs <span class="dim">(popular = trusted = energy more persuasive)</span></li>
-    <li><strong>Dampens</strong> Energy → Chats <span class="dim">(large crowds chat regardless)</span></li>
-    <li><strong>Dampens</strong> Stress → Subs <span class="dim">(established audiences want polish for paid commitment)</span></li>
-  </ul>
-  <div class="eyebrow" style="margin-top:1.8em;">Chatroom sentiment moderates</div>
-  <ul class="bullets">
-    <li>Positive sentiment <strong>dampens</strong> Energy → Subs <span class="dim">(less need for anchor effort)</span></li>
-  </ul>
-  <p style="margin-top:1.5em;">Vocal strategy should <span class="hi">adapt to context</span>, not be one-size-fits-all.</p>
+<!-- ============ 16. FINDING 03 — POPULARITY ============ -->
+<section class="slide" id="s16">
+  <h2>Finding 03 <span class="h2-dim">— popularity moderates</span></h2>
+  <p><strong>Channel popularity</strong> <span class="dim">(top-5 binary) reshapes both energy and stress effects:</span></p>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th>Interaction</th>
+        <th class="center">β</th>
+        <th>What it means</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Popularity × Energy → Subs</td>
+        <td class="center hi"><strong>+0.0285***</strong></td>
+        <td class="dim">Halo amplifies energy's persuasive force on conversion</td>
+      </tr>
+      <tr>
+        <td>Popularity × Energy → Chats</td>
+        <td class="center dim">−0.0177***</td>
+        <td class="dim">Big crowds chat anyway — anchor energy matters less</td>
+      </tr>
+      <tr>
+        <td>Popularity × Stress → Chats</td>
+        <td class="center hi"><strong>+0.0094***</strong></td>
+        <td class="dim">Stress becomes a <em>"rallying cry"</em> in popular channels</td>
+      </tr>
+      <tr>
+        <td>Popularity × Stress → Subs</td>
+        <td class="center dim">−0.0226***</td>
+        <td class="dim">Established audiences want polish, not tension, for paid commitment</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="dim" style="margin-top:1.5em;"><em>Pre-validation by popularity flips how each vocal cue lands.</em></p>
+  <!-- SPEAKER NOTES (~90 sec): Popularity is a halo. For energy → subs: viewers have already validated status, so energy weighs MORE (β=+0.0285). For energy → chats: packed chatroom chats regardless (β=-0.0177). Stress splits: rallying cry for chats (β=+0.0094) but hurts subs (β=-0.0226) — established audiences expect polish for paid commitment. -->
   <div class="slide-num">16</div>
 </section>
 
-<!-- ============ 17. STRATEGIC RECS ============ -->
+<!-- ============ 17. FINDING 03 — SENTIMENT ============ -->
+<section class="slide" id="s17">
+  <h2>Finding 03 <span class="h2-dim">— sentiment moderates</span></h2>
+  <p><strong>Chatroom sentiment</strong> <span class="dim">(NLTK on viewer messages, lagged) further conditions vocal effects:</span></p>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th>Interaction</th>
+        <th class="center">β</th>
+        <th>What it means</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Sentiment × Energy → Subs</td>
+        <td class="center dim">−0.302***</td>
+        <td class="dim">Positive room ⇒ anchor's energy adds less to conversion</td>
+      </tr>
+      <tr>
+        <td>Sentiment × Stress → Chats</td>
+        <td class="center dim">−0.0090**</td>
+        <td class="dim">Positive sentiment slightly attenuates the stress→chat channel</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top:1.5em;">The social environment partially <span class="hi">substitutes</span> for what the anchor's voice provides.</p>
+  <p class="dim"><em>Consistent with Social Influence Theory.</em></p>
+  <!-- SPEAKER NOTES (~75 sec): When the room is already positive, the marginal value of anchor's expressive delivery drops sharply (β=-0.302, p<0.01). Social context partially substitutes for the persuasive signal from the source. -->
+  <div class="slide-num">17</div>
+</section>
+
+<!-- ============ 18. ROBUSTNESS ============ -->
 <section class="slide" id="s18">
+  <h2>Robustness</h2>
+  <p><strong>Copula correction is necessary</strong></p>
+  <ul class="bullets">
+    <li>Copula terms significant (p&lt;0.05) → viewer behavior does feed back into anchor's voice</li>
+    <li>Without correction, audio coefficients would be biased</li>
+  </ul>
+  <hr class="divider">
+  <p><strong>Lag sensitivity</strong> — re-estimated with two-minute lag (t−2)</p>
+  <ul class="bullets">
+    <li>Stress and energy effects: <span class="hi">stable</span></li>
+    <li>Cognitive effects: <span class="hi">attenuate</span></li>
+    <li><em>Cognitive cues may be more transient than emotional ones.</em></li>
+  </ul>
+  <hr class="divider">
+  <p><strong>Other robustness</strong> <span class="dim">(in appendix)</span></p>
+  <ul class="bullets">
+    <li>Alternative copula seeds, standardization choices, anchor-specific clustering — all consistent</li>
+  </ul>
+  <!-- SPEAKER NOTES (~75 sec): Copula terms are themselves significant — validates methodology and confirms reverse causality. Lag t-2: stress and energy stable, cognitive attenuates — emotional cues leave a longer trace. Alternative specs in appendix all hold. -->
+  <div class="slide-num">18</div>
+</section>
+
+<!-- ============ 19. STRATEGIC RECS ============ -->
+<section class="slide" id="s19">
   <h2>Strategic recommendations</h2>
   <table class="table-thick">
     <thead>
@@ -1010,11 +970,12 @@
       </tr>
     </tbody>
   </table>
-  <div class="slide-num">17</div>
+  <!-- SPEAKER NOTES (~60 sec): Different stages of an anchor's career call for different vocal strategies. Platforms can use this for coaching and creator development programs. -->
+  <div class="slide-num">19</div>
 </section>
 
-<!-- ============ 18. REPLICATION DATA ============ -->
-<section class="slide" id="s19">
+<!-- ============ 20. REPLICATION DATA ============ -->
+<section class="slide" id="s20">
   <h2>New since submission <span class="h2-dim">— replication data</span></h2>
   <div class="cols-2">
     <div>
@@ -1036,11 +997,12 @@
       </ul>
     </div>
   </div>
-  <div class="slide-num">18</div>
+  <!-- SPEAKER NOTES (~45 sec): Full replication wave collected while awaiting revision feedback. 1,138 fresh VODs, same panel structure — drop-in for replication analysis. -->
+  <div class="slide-num">20</div>
 </section>
 
-<!-- ============ 19. METHODOLOGY UPGRADE ============ -->
-<section class="slide" id="s20">
+<!-- ============ 21. METHODOLOGY UPGRADE ============ -->
+<section class="slide" id="s21">
   <h2>Methodology upgrade</h2>
   <p class="dim">From proprietary closed-box to open-source, fully reproducible pipeline.</p>
   <table class="table-thick" style="font-size:0.9rem;">
@@ -1075,11 +1037,105 @@
     </tbody>
   </table>
   <p style="margin-top:1em;"><span class="dim">Transparent, replicable, finer-grained, extensible.</span></p>
-  <div class="slide-num">19</div>
+  <!-- SPEAKER NOTES (~60 sec): Replaced Nemesysco (proprietary, closed-box) with openSMILE eGeMAPS. Added CLIP video controls and transcript-derived linguistic controls. Everything reproducible. -->
+  <div class="slide-num">21</div>
 </section>
 
-<!-- ============ 20. THEORETICAL CONTRIBUTIONS ============ -->
-<section class="slide" id="s21">
+<!-- ============ 22. VALIDATING NEW PIPELINE ============ -->
+<section class="slide" id="s22">
+  <div class="eyebrow">Replication preview — eGeMAPS factor structure</div>
+  <h2>Validating the new pipeline</h2>
+  <p><span class="ink">Factor analysis on the new wave (34,000+ minute-observations)</span> recovers a <span class="hi">3-factor structure</span> that mirrors the original:</p>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th>Factor</th>
+        <th>Top loadings</th>
+        <th>Interpretation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>F1</strong></td>
+        <td class="dim">Formant amplitudes (F1, F2, F3 relative to F0)</td>
+        <td><span class="hi">Expressive Energy</span> <span class="dim">(loudness/projection)</span></td>
+      </tr>
+      <tr>
+        <td><strong>F2</strong></td>
+        <td class="dim">Formant frequencies + unvoiced segment length</td>
+        <td><span class="hi">Cognitive Tones</span> <span class="dim">(articulation precision)</span></td>
+      </tr>
+      <tr>
+        <td><strong>F3</strong></td>
+        <td class="dim">Alpha ratio, Hammarberg index, MFCC2</td>
+        <td><span class="hi">Stressed Tones</span> <span class="dim">(spectral tension)</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="dim" style="margin-top:1.5em;"><em>Same 3-factor structure as Nemesysco — <span class="ink">same constructs, transparent measurement</span>.</em></p>
+  <!-- SPEAKER NOTES (~75 sec): Factor 1 = loudness/amplitude → energy. Factor 2 = formant precision/pause structure → cognitive. Factor 3 = spectral tension → stress. Same theoretical constructs as Nemesysco, but now fully transparent and reproducible. -->
+  <div class="slide-num">22</div>
+</section>
+
+<!-- ============ 23. PER-MINUTE SNAPSHOT ============ -->
+<section class="slide" id="s23">
+  <div class="eyebrow">What the new pipeline measures — descriptive stats from new wave</div>
+  <h2>Per-minute feature snapshot</h2>
+  <table class="table-thick">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th class="center">Mean</th>
+        <th class="center">SD</th>
+        <th>What it captures</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>LUFS loudness</td>
+        <td class="center">−29.8 dB</td>
+        <td class="center">5.2</td>
+        <td class="dim">Broadcast loudness (typical streaming range)</td>
+      </tr>
+      <tr>
+        <td>VAD ratio</td>
+        <td class="center">0.34</td>
+        <td class="center">0.27</td>
+        <td class="dim">Anchor speaking ~1/3 of the time</td>
+      </tr>
+      <tr>
+        <td>Speech rate</td>
+        <td class="center">80 w/min</td>
+        <td class="center">59</td>
+        <td class="dim">Conversational pace, high variance</td>
+      </tr>
+      <tr>
+        <td>Lexical diversity</td>
+        <td class="center">0.64</td>
+        <td class="center">0.16</td>
+        <td class="dim">Type-token ratio in transcripts</td>
+      </tr>
+      <tr>
+        <td>Intra-minute SSIM</td>
+        <td class="center">0.62</td>
+        <td class="center">0.17</td>
+        <td class="dim">Visual stability across seconds within minute</td>
+      </tr>
+      <tr>
+        <td>Inter-minute CLIP cosine</td>
+        <td class="center">—</td>
+        <td class="center">—</td>
+        <td class="dim">Semantic shift between consecutive minutes</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="dim" style="margin-top:1em;"><em>Distributions are well-behaved and theoretically interpretable across all 1,131 streams.</em></p>
+  <!-- SPEAKER NOTES (~60 sec): Sanity check. LUFS at -30 dB exactly what streaming guidelines target. VAD 0.34 — anchors speak ~1/3 of the time. Speech rate 80 wpm with high variance reflects mix of intense action and quieter moments. -->
+  <div class="slide-num">23</div>
+</section>
+
+<!-- ============ 24. CONTRIBUTIONS ============ -->
+<section class="slide" id="s24">
   <h2>Contributions</h2>
   <ol class="numbered">
     <li>
@@ -1099,11 +1155,12 @@
       <span class="sub">For analyzing multimodal interactions in digital settings.</span>
     </li>
   </ol>
-  <div class="slide-num">20</div>
+  <!-- SPEAKER NOTES (~60 sec): Four contributions. Engagement isn't one thing. Stress can be positive. Two persuasion theories together. Fully reproducible template. -->
+  <div class="slide-num">24</div>
 </section>
 
-<!-- ============ 21. LIMITATIONS & FUTURE ============ -->
-<section class="slide" id="s22">
+<!-- ============ 25. LIMITATIONS & FUTURE ============ -->
+<section class="slide" id="s25">
   <h2>Limitations &amp; future research</h2>
   <div class="cols-2">
     <div>
@@ -1117,30 +1174,31 @@
     <div>
       <div class="eyebrow">In progress</div>
       <ul class="bullets">
-        <li>Replication on 2025–26 wave</li>
+        <li>Replication on 2025–26 wave <span class="dim">(features extracted, regression next)</span></li>
         <li>Per-minute facial semantics <span class="dim">(CLIP)</span></li>
-        <li>Cross-category generalization</li>
+        <li>Cross-category generalization <span class="dim">(Just Chatting, IRL, music)</span></li>
         <li>Live broadcast vs. VOD viewer differences</li>
       </ul>
     </div>
   </div>
-  <div class="slide-num">21</div>
+  <!-- SPEAKER NOTES (~45 sec): Honest about scope. Future work goes broader. Replication wave features extracted; regression next. -->
+  <div class="slide-num">25</div>
 </section>
 
-<!-- ============ 22. THANK YOU ============ -->
-<section class="slide thanks-slide" id="s23">
+<!-- ============ 26. THANK YOU ============ -->
+<section class="slide thanks-slide" id="s26">
   <h1>Thank you.</h1>
   <p>
     <span class="author">Qingli Zeng</span>
     <span class="dim">  ·  Hebrew University of Jerusalem</span>
   </p>
   <p style="margin-top:0.6em;">
-    <a href="mailto:Qingli.Zeng@mail.huji.ac.il">Qingli.Zeng@mail.huji.ac.il</a>
+    <a href="mailto:qingli.zeng@mail.huji.ac.il">qingli.zeng@mail.huji.ac.il</a>
   </p>
+  <!-- SPEAKER NOTES: Open Q&A. Anticipate: (1) Why top-25 only? (2) Why copula not IV? (3) How do you separate vocal cues from game content? (4) How does eGeMAPS map to Nemesysco factors? (5) Can platforms operationalize this? -->
 </section>
 
 <script>
-  // Scroll progress bar
   const progress = document.getElementById('progress');
   function updateProgress() {
     const h = document.documentElement;
@@ -1150,7 +1208,6 @@
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  // Keyboard navigation between slides
   const slides = Array.from(document.querySelectorAll('.slide'));
   function currentSlide() {
     const mid = window.scrollY + window.innerHeight / 2;
@@ -1166,12 +1223,10 @@
     const i = currentSlide();
     if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
       e.preventDefault();
-      const next = slides[Math.min(i + 1, slides.length - 1)];
-      next.scrollIntoView({ behavior: 'smooth' });
+      slides[Math.min(i + 1, slides.length - 1)].scrollIntoView({ behavior: 'smooth' });
     } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
       e.preventDefault();
-      const prev = slides[Math.max(i - 1, 0)];
-      prev.scrollIntoView({ behavior: 'smooth' });
+      slides[Math.max(i - 1, 0)].scrollIntoView({ behavior: 'smooth' });
     }
   });
 </script>
