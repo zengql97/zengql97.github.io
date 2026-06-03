@@ -235,11 +235,7 @@ Two distinct psychological pathways:
 
 > Stressed vocal tones **positively** affect engagement, both **chats** (β=0.0037***) and **subscriptions** (β=0.0377***).
 
-**Why?** Stress in the voice signals **authenticity** and **emotional investment**.
-
-In an overproduced media landscape — autotuned songs, edited podcasts, curated content — **audible effort becomes a credibility marker**. Viewers reward anchors who sound like they actually care.
-
-*This is the largest single coefficient on chats in our model.*
+**Interpretation.** *One possibility: stress may signal authenticity and emotional investment — rewarded in a media landscape saturated with polished, edited content. But the mechanism warrants further investigation.*
 
 <!-- SPEAKER NOTES (~90 sec): The big surprise — what we call the "stress paradox." Common sense says stress should be a turn-off: a strained, tense voice is unpleasant to listen to. But our coefficients say the opposite. Subscriptions: β=0.0377 (p<0.01). Chats: β=0.0037 (p<0.01) — the largest direct effect on chats of any vocal feature we measured. Why? In a media environment saturated with polished, autotuned, edited content, AUDIBLE EFFORT becomes a credibility signal. When viewers hear strain in an anchor's voice — frustration, exertion, real reaction — they read it as "this person is genuinely invested." That's a more honest signal than perfect delivery, and it's rewarded with both immediate engagement (chats) and financial commitment (subs). -->
 
