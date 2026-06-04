@@ -341,6 +341,24 @@
   .framework-box ul { list-style: none; }
   .framework-box li { color: var(--dim); font-size: 0.88em; margin-bottom: 0.2em; }
 
+  /* ---------- Framework v2 (with moderators) ---------- */
+  .fw-outer { display: flex; flex-direction: column; gap: 1.4rem; margin: 1.2rem 0; }
+  .fw-main { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+  .fw-box { background: var(--card); border: 1px solid var(--hair); border-radius: 6px; padding: 1em 1.2em; }
+  .fw-box-title { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); font-weight: 600; margin-bottom: 0.7em; }
+  .fw-box ul { list-style: none; padding: 0; margin: 0; }
+  .fw-box li { color: var(--ink); font-weight: 600; font-size: 1rem; margin-bottom: 0.35em; }
+  .fw-mid { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 0 1.2rem; }
+  .fw-mod-label { background: var(--card); border: 1px solid var(--hair); border-radius: 4px; padding: 0.4em 0.9em; font-size: 0.85rem; color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .fw-horiz-arrow { font-size: 2.4rem; color: var(--ink); line-height: 1; font-weight: 700; padding: 0.1rem 0; }
+  .fw-vert-arrow { font-size: 1rem; color: var(--dim); line-height: 1; }
+  .fw-controls { border: 1px solid var(--hair); border-radius: 6px; padding: 0.8em 1.2em; display: flex; gap: 1.5rem; align-items: flex-start; }
+  .fw-controls-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); font-weight: 600; flex-shrink: 0; padding-top: 0.15em; }
+  .fw-controls-groups { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .fw-ctrl-group .group-head { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dim); font-weight: 600; margin-bottom: 0.25em; }
+  .fw-ctrl-group ul { list-style: none; padding: 0; margin: 0; }
+  .fw-ctrl-group li { color: var(--dim); font-size: 0.82rem; margin-bottom: 0.1em; }
+
   /* ---------- Equation ---------- */
   .equation {
     font-family: var(--serif);
@@ -587,24 +605,50 @@
 <!-- ============ 6. FRAMEWORK ============ -->
 <section class="slide" id="s6">
   <h2>Framework</h2>
-  <div class="framework">
-    <div class="framework-box">
-      <div class="label">Anchor vocal characteristics</div>
-      <ul><li>Expressive Energy</li><li>Stressed Tones</li><li>Cognitive Tones</li></ul>
+  <div class="fw-outer">
+    <div class="fw-main">
+      <div class="fw-box">
+        <div class="fw-box-title">Anchors' Vocal Characteristics</div>
+        <ul>
+          <li>Positivity</li>
+          <li>Stress</li>
+          <li>Cognitive</li>
+        </ul>
+      </div>
+      <div class="fw-mid">
+        <div class="fw-mod-label">Chatroom Sentiment</div>
+        <div class="fw-vert-arrow">↓</div>
+        <div class="fw-horiz-arrow">→</div>
+        <div class="fw-vert-arrow">↑</div>
+        <div class="fw-mod-label">Channel Popularity</div>
+      </div>
+      <div class="fw-box">
+        <div class="fw-box-title">Audience's Engagements</div>
+        <ul>
+          <li>Chats <span class="dim">(immediate)</span></li>
+          <li>Subscriptions <span class="dim">(sustained)</span></li>
+        </ul>
+      </div>
     </div>
-    <div class="arrow">→</div>
-    <div class="framework-box">
-      <div class="label">Audience reaction</div>
-      <ul><li>Chatroom sentiment</li><li>Sponsor sentiment</li><li>Free-rider sentiment</li></ul>
-    </div>
-    <div class="arrow">→</div>
-    <div class="framework-box">
-      <div class="label">Engagement</div>
-      <ul><li>Chats (immediate)</li><li>Subscriptions (sustained)</li></ul>
+    <div class="fw-controls">
+      <div class="fw-controls-label">Controls</div>
+      <div class="fw-controls-groups">
+        <div class="fw-ctrl-group">
+          <div class="group-head">Linguistic</div>
+          <ul><li>Anticipation</li><li>Hesitation</li><li>Concentration</li></ul>
+        </div>
+        <div class="fw-ctrl-group">
+          <div class="group-head">Video</div>
+          <ul><li>Dynamics</li><li>HSV</li></ul>
+        </div>
+        <div class="fw-ctrl-group">
+          <div class="group-head">Audio</div>
+          <ul><li>MOSNet</li><li>Harmonic</li></ul>
+        </div>
+      </div>
     </div>
   </div>
-  <p class="dim" style="margin-top:1.5em;">Video content controls (within- and across-scene dynamics) sit alongside as exogenous controls.</p>
-  <!-- SPEAKER NOTES (~45 sec): Conceptual flow. Voice features → audience reaction → engagement. Video content is a control, not a cause. -->
+  <!-- SPEAKER NOTES (~45 sec): Conceptual flow. Voice features → moderated by Chatroom Sentiment (above) and Channel Popularity (below) → engagement. Controls absorb linguistic, video, and audio confounds. -->
   <div class="slide-num">06</div>
 </section>
 

@@ -78,27 +78,20 @@ These are **not the same thing.** *They likely respond to different vocal cues.*
 
 ---
 ## SLIDE 6 — Framework
-<!-- Three-box arrow diagram -->
+<!-- Left box → [moderators on arrow] → Right box + controls bar -->
 
-`Anchor vocal characteristics`
-- Expressive Energy
-- Stressed Tones
-- Cognitive Tones
+`Anchors' Vocal Characteristics`
+- Positivity
+- Stress
+- Cognitive
 
-→
+→ moderated by: Chatroom Sentiment (above) · Channel Popularity (below) →
 
-`Audience reaction`
-- Chatroom sentiment
-- Sponsor sentiment
-- Free-rider sentiment
-
-→
-
-`Engagement`
+`Audience's Engagements`
 - Chats (immediate)
 - Subscriptions (sustained)
 
-*Video content controls (within- and across-scene dynamics) sit alongside as exogenous controls.*
+**Controls:** Linguistic: Anticipation, Hesitation, Concentration · Video: Dynamics, HSV · Audio: MOSNet, Harmonic
 
 <!-- SPEAKER NOTES (~45 sec): Conceptual flow. Voice features → audience reaction → engagement. Video content is a control, not a cause. -->
 
