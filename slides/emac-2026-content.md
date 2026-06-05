@@ -1,6 +1,6 @@
 # EMAC 2026 Slides — 20-Minute Presentation Script
 <!-- Edit text freely. Keep the slide markers (--- SLIDE N ---) and special tags intact so I can rebuild the HTML. -->
-<!-- Markup: **text** = red accent highlight | *text* = muted/dim | `text` = bold white -->
+<!-- Markup: **text** = blue accent highlight | *text* = muted/dim | `text` = bold dark -->
 <!-- Target length: ~46 sec/slide × 26 slides = ~20 min -->
 
 ---
@@ -93,7 +93,7 @@ These are **not the same thing.** *They likely respond to different vocal cues.*
 
 **Controls:** Linguistic: Anticipation, Hesitation, Concentration · Video: Dynamics, HSV · Audio: MOSNet, Harmonic
 
-<!-- SPEAKER NOTES (~45 sec): Conceptual flow. Voice features → audience reaction → engagement. Video content is a control, not a cause. -->
+<!-- SPEAKER NOTES (~45 sec): Conceptual flow. Voice features → moderated by Chatroom Sentiment and Channel Popularity → two engagement outcomes. Linguistic, video, and audio variables sit alongside as controls. -->
 
 ---
 ## SLIDE 7 — Theoretical framework
