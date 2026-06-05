@@ -7,13 +7,13 @@
 <meta name="description" content="EMAC 2026 talk on how Twitch anchors' voice features (expressive energy, stressed tones, cognitive tones) drive viewer engagement.">
 <style>
   :root {
-    --bg:        #0F1115;
-    --fg:        #E8E8EC;
-    --dim:       #7E7E88;
-    --hair:      #2A2D35;
-    --ink:       #F5F5F7;
-    --accent:    #FF6B6B;
-    --card:      #15171C;
+    --bg:        #ffffff;
+    --fg:        #374151;
+    --dim:       #9ca3af;
+    --hair:      #e5e7eb;
+    --ink:       #111827;
+    --accent:    #2563eb;
+    --card:      #f3f4f6;
     --serif:     'Iowan Old Style', 'Apple Garamond', 'Baskerville', 'Times New Roman', Georgia, serif;
     --sans:      -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Helvetica, Arial, sans-serif;
     --mono:      'SF Mono', Menlo, Consolas, 'Roboto Mono', monospace;
@@ -293,7 +293,7 @@
     border-left: 3px solid transparent;
     border-radius: 4px;
     transition: border-color 0.3s, opacity 0.3s;
-    opacity: 0.4;
+    opacity: 0.5;
   }
   .anno-explain.active { opacity: 1; }
   .anno-explain .role {
@@ -381,6 +381,10 @@
     color: var(--ink);
     margin: 1.6em 0;
     font-weight: 500;
+    background: #eff6ff;
+    border-left: 4px solid var(--accent);
+    padding: 0.8em 1.1em;
+    border-radius: 0 4px 4px 0;
   }
 
   /* ---------- Thank you ---------- */
@@ -389,7 +393,7 @@
   .thanks-slide a {
     color: var(--accent);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #bfdbfe;
     transition: border-color 0.2s;
   }
   .thanks-slide a:hover { border-bottom-color: var(--accent); }
