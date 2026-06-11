@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMAC 2026 — Presenter View</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; background: #111827; color: #e5e7eb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+
+  /* ── Layout ── */
+  .layout { display: flex; height: 100vh; }
+
+  .panel {
+    width: 340px;
+    flex-shrink: 0;
+    background: #111827;
+    border-right: 1px solid #1f2937;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .slides-frame { flex: 1; min-width: 0; background: #000; }
+  .slides-frame iframe { width: 100%; height: 100%; border: none; display: block; }
+
+  /* ── Timer header ── */
+  .panel-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .timer {
+    font-size: 30px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+    color: #f9fafb;
+    min-width: 80px;
+  }
+  .timer.warn { color: #f59e0b; }
+  .timer.over { color: #ef4444; }
+  .timer-btns { display: flex; gap: 6px; margin-left: auto; }
+  .tbtn {
+    background: #1f2937;
+    border: 1px solid #374151;
+    color: #9ca3af;
+    border-radius: 5px;
+    padding: 4px 11px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.1s, color 0.1s;
+  }
+  .tbtn:hover { background: #374151; color: #e5e7eb; }
+  .tbtn.active { background: #3b82f6; border-color: #3b82f6; color: #fff; }
+
+  /* ── Slide indicator ── */
+  .slide-indicator {
+    padding: 10px 16px;
+    border-bottom: 1px solid #1f2937;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .snum { font-size: 20px; font-weight: 700; color: #fff; }
+  .stotal { font-size: 13px; color: #6b7280; }
+  .stime-badge {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    color: #818cf8;
+    background: #1e1b4b;
+    padding: 2px 8px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .stitle {
+    font-size: 13px;
+    color: #9ca3af;
+    padding: 6px 16px 10px;
+    border-bottom: 1px solid #1f2937;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ── Notes ── */
+  .notes-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #d1d5db;
+  }
+  .notes-body p { margin-bottom: 10px; }
+  .notes-body::-webkit-scrollbar { width: 4px; }
+  .notes-body::-webkit-scrollbar-thumb { background: #374151; border-radius: 2px; }
+
+  /* ── Next slide ── */
+  .next-panel {
+    padding: 10px 16px;
+    border-top: 1px solid #1f2937;
+    flex-shrink: 0;
+  }
+  .next-label { font-size: 10px; color: #4b5563; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+  .next-title { font-size: 13px; color: #6b7280; font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* ── Keyboard hint ── */
+  .kbd-hint {
+    padding: 6px 16px;
+    font-size: 10px;
+    color: #374151;
+    flex-shrink: 0;
+    border-top: 1px solid #1f2937;
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <!-- Notes panel (left) -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="timer" id="timerEl">00:00</span>
+      <div class="timer-btns">
+        <button class="tbtn" id="startBtn" onclick="toggleTimer()">Start</button>
+        <button class="tbtn" onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+    <div class="slide-indicator">
+      <span class="snum" id="slideNum">1</span>
+      <span class="stotal">/ 26</span>
+      <span class="stime-badge" id="slideTime">~30s</span>
+    </div>
+    <div class="stitle" id="slideTitle">Title</div>
+    <div class="notes-body" id="notesBody"></div>
+    <div class="next-panel">
+      <div class="next-label">Next →</div>
+      <div class="next-title" id="nextTitle"></div>
+    </div>
+    <div class="kbd-hint">←→ / Space to navigate · P to focus slides</div>
+  </div>
+
+  <!-- Slides iframe (right) -->
+  <div class="slides-frame">
+    <iframe id="slidesFrame" src="emac-2026.html" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+// ── Slide data ──────────────────────────────────────────────────
+const SLIDES = [
+  {
+    title: "Title",
+    time: "~30s",
+    notes: `30 sec hello & framing.\n\n"Today I'll show you how the way streamers SPEAK — not what's on their screen — drives two different kinds of viewer engagement, and how those effects depend on context."`
+  },
+  {
+    title: "The puzzle",
+    time: "~60s",
+    notes: `Set up the setting. Anchors compete with gameplay for the screen, can't gesture, can't type. The voice is the ONLY persistent persuasive channel.\n\nSo it's a clean test bed for vocal influence in a high-stakes market.`
+  },
+  {
+    title: "Why it matters",
+    time: "~30s",
+    notes: `Big market, high stakes, no academic answer yet.\n\nLet the numbers speak — don't over-explain.`
+  },
+  {
+    title: "The live-streaming ecosystem",
+    time: "~90s",
+    notes: `Click through the 5 annotations live — one click per element.\n\n1→ Anchor (green)\n2→ Video Game (amber)\n3→ Chats (blue)\n4→ Sponsors (orange dot)\n5→ Free riders (pink dot)\n\nClick once more to reset for a clean slide.`
+  },
+  {
+    title: "Two kinds of engagement",
+    time: "~45s",
+    notes: `Central distinction. Most prior work bundles "engagement" into one variable.\n\nWe separate them: chats are impulsive & social; subscriptions are deliberate & financial.\n\nDifferent cues → different outcomes.`
+  },
+  {
+    title: "Framework",
+    time: "~45s",
+    notes: `Conceptual flow: Voice features → moderated by Chatroom Sentiment (above arrow) and Channel Popularity (below arrow) → two engagement outcomes.\n\nControls bar at the bottom absorbs linguistic, video, and audio confounds.`
+  },
+  {
+    title: "Theoretical framework",
+    time: "~60s",
+    notes: `Two theoretical traditions working together:\n\n• Social Approval Theory (Bundy & Pfarrer 2015) — WHY emotional vocal cues drive paid commitment.\n\n• Social Influence Theory (Cialdini 2006) — WHY effects vary by context (moderation).`
+  },
+  {
+    title: "Three vocal dimensions",
+    time: "~30s",
+    notes: `Three theoretically grounded dimensions measured from the audio signal:\n\n• Energy = enthusiasm / emotional intensity\n• Stress = audible effort / tension\n• Cognitive = analytical depth / precision\n\nEach carries a distinct social signal.`
+  },
+  {
+    title: "Energy (demo)",
+    time: "~75s",
+    notes: `"Listen to this..." → play LOW energy clip (~10 sec)\n"...and this..." → play HIGH energy clip (~10 sec)\n\n"Same person, same setting, same game — but you can hear the difference."\n\nLet the audience listen before explaining the construct.`
+  },
+  {
+    title: "Stress Level (demo)",
+    time: "~75s",
+    notes: `"Now stress. Listen to this..." → play LOW stress (~10 sec)\n"...vs this..." → play HIGH stress (~10 sec)\n\nNote: the video clips show the face-cam + game simultaneously so the audience can see it's the same context.`
+  },
+  {
+    title: "Hypotheses",
+    time: "~45s",
+    notes: `Walk through the 5 hypotheses quickly:\n\n• H1: Energy → subs (not chats)\n• H2: Stress → both (authenticity signal)\n• H3: Cognitive → subs (competence)\n• H4: Popularity moderates (halo)\n• H5: Sentiment moderates (social substitution)\n\nDon't dwell — these follow naturally from the theories.`
+  },
+  {
+    title: "Data",
+    time: "~45s",
+    notes: `Top-25 anchors — 35% of all platform viewership.\n\nOver 1,000 hours of streaming content with synchronized:\n• Audio at 40,000 Hz\n• HD video\n• Timestamped chat logs\n• Timestamped subscription records\n\nPanel structure: streamer × stream × minute.`
+  },
+  {
+    title: "Empirical model",
+    time: "~60s",
+    notes: `Two key choices:\n\n1. Negative Binomial — because DVs are counts (chats and subs per minute).\n\n2. Gaussian Copula correction — addresses reverse causality (viewer reactions can feed back into anchor's voice) without needing an external instrument.`
+  },
+  {
+    title: "Finding 01 — engagement is not unidimensional",
+    time: "~75s",
+    notes: `Walk through the table row by row.\n\n• Stress lights up BOTH columns → the only cue that drives both chats AND subs\n• Energy and Cognitive ONLY drive subs\n\nKey message: bundling chats + subs into one "engagement" metric would mask two very different psychological mechanisms.`
+  },
+  {
+    title: "Finding 02 — the stress paradox",
+    time: "~90s",
+    notes: `Counter-intuitive result — acknowledge it explicitly.\n\n"You might expect stress to be off-putting. We find the opposite."\n\nInterpretation: in a media landscape saturated with polished, edited content, AUDIBLE EFFORT becomes a credibility signal. Viewers read strain as genuine investment.\n\nNote: soften confidence here — mechanism warrants further investigation.`
+  },
+  {
+    title: "Finding 03 — popularity moderates",
+    time: "~90s",
+    notes: `Popularity is a halo — it reshapes HOW each cue lands.\n\n• Energy → subs: halo amplifies (+0.0285) — viewers already validated, so energy converts more\n• Energy → chats: crowds chat anyway, anchor energy matters less (−0.0177)\n• Stress → chats: becomes a "rallying cry" in popular channels (+0.0094)\n• Stress → subs: hurts (−0.0226) — established audiences expect polish for paid commitment\n\nPhrase it as: pre-validation by popularity flips how each vocal cue lands.`
+  },
+  {
+    title: "Finding 03 — sentiment moderates",
+    time: "~75s",
+    notes: `When the chatroom is already positive, the marginal value of the anchor's expressive delivery drops sharply.\n\nSentiment × Energy → Subs: β = −0.302 (p<0.01) — this is a large effect.\n\nThe social environment partially substitutes for what the anchor's voice provides — consistent with Social Influence Theory.`
+  },
+  {
+    title: "Robustness",
+    time: "~75s",
+    notes: `Three robustness points:\n\n1. Copula terms are themselves significant — validates methodology and confirms reverse causality exists.\n\n2. Lag t−2 sensitivity: stress and energy are stable; cognitive attenuates → emotional cues leave a longer trace.\n\n3. Alternative specs in appendix (different seeds, standardization, clustering) all consistent.`
+  },
+  {
+    title: "Strategic recommendations",
+    time: "~60s",
+    notes: `Practical takeaway framed by career stage:\n\n• New anchors: match chatroom sentiment, leverage amplification\n• Established anchors: reserve energy for conversion (chats happen anyway)\n• All anchors: stress drives engagement but excess tension hurts subs in big channels — calibrate\n\nPlatforms can use this for creator coaching programs.`
+  },
+  {
+    title: "New since submission — replication data",
+    time: "~45s",
+    notes: `Full replication wave collected while awaiting revision feedback.\n\n1,138 fresh Twitch VODs (~22 TB) from Nov 2025–Jan 2026, same panel structure.\n\nThis is a drop-in for replication analysis — pre-empts reviewer concerns about a single time window.`
+  },
+  {
+    title: "Methodology upgrade",
+    time: "~60s",
+    notes: `Replaced Nemesysco (proprietary, closed-box) with openSMILE eGeMAPS.\n\n• Added CLIP embeddings for video controls\n• Transcript-derived linguistic controls (speech rate, hesitations, lexical diversity)\n\nEverything is now open-source and fully reproducible.`
+  },
+  {
+    title: "Validating the new pipeline",
+    time: "~75s",
+    notes: `Factor analysis on new wave (34,000+ minute-observations) recovers a 3-factor structure that mirrors the original:\n\n• F1 = loudness/amplitude → Expressive Energy\n• F2 = formant precision/pause structure → Cognitive Tones\n• F3 = spectral tension → Stressed Tones\n\nSame theoretical constructs as Nemesysco, but now fully transparent and reproducible.`
+  },
+  {
+    title: "Per-minute feature snapshot",
+    time: "~60s",
+    notes: `Descriptive sanity check from the new wave:\n\n• LUFS −30 dB: exactly what streaming guidelines target\n• VAD 0.34: anchors speak ~1/3 of the time\n• Speech rate 80 wpm with high variance: reflects mix of intense action and quieter moments\n\nDistributions are well-behaved and theoretically interpretable.`
+  },
+  {
+    title: "Contributions",
+    time: "~45s",
+    notes: `Four contributions:\n\n1. Engagement isn't one thing — separate immediate and sustained\n2. Stress can be positive (authenticity signal)\n3. Two persuasion theories used together to explain both main effects and moderation\n4. Fully reproducible open-source pipeline for audio/video/text panel data`
+  },
+  {
+    title: "Limitations & future work",
+    time: "~45s",
+    notes: `Honest about scope:\n\n• Sample: top-25 anchors only — may not generalize to smaller creators\n• Platform: Twitch — gaming context may limit generalizability\n• Replication regression: features extracted, results pending\n• Future: other platforms, other streaming genres, cross-cultural generalization`
+  },
+  {
+    title: "Thank you",
+    time: "Q&A",
+    notes: `Open Q&A — anticipate these questions:\n\n1. Why top-25 only? → 35% of viewership, data feasibility; acknowledging limitation\n2. Why copula not IV? → No clean instrument available; copula works under weaker assumptions\n3. How do you separate vocal cues from game content? → Standardized within-streamer; video controls (CLIP, SSIM)\n4. How does eGeMAPS map to Nemesysco factors? → Factor analysis shows same 3-factor structure (slide 22)\n5. Can platforms operationalize this? → Yes — suggest coaching dashboards tied to these measures`
+  }
+];
+
+// ── Timer ───────────────────────────────────────────────────────
+let timerSec = 0, timerRunning = false, timerInterval = null;
+
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function updateTimerDisplay() {
+  const m = Math.floor(timerSec / 60), s = timerSec % 60;
+  const el = document.getElementById('timerEl');
+  el.textContent = pad(m) + ':' + pad(s);
+  el.className = 'timer' + (timerSec >= 1500 ? ' over' : timerSec >= 1200 ? ' warn' : '');
+}
+
+function toggleTimer() {
+  const btn = document.getElementById('startBtn');
+  if (timerRunning) {
+    clearInterval(timerInterval);
+    timerRunning = false;
+    btn.textContent = 'Start';
+    btn.classList.remove('active');
+  } else {
+    timerInterval = setInterval(() => { timerSec++; updateTimerDisplay(); }, 1000);
+    timerRunning = true;
+    btn.textContent = 'Pause';
+    btn.classList.add('active');
+  }
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  timerRunning = false;
+  timerSec = 0;
+  updateTimerDisplay();
+  document.getElementById('startBtn').textContent = 'Start';
+  document.getElementById('startBtn').classList.remove('active');
+}
+
+// ── Panel update ────────────────────────────────────────────────
+let currentIdx = 0;
+
+function setSlide(idx) {
+  if (idx < 0 || idx >= SLIDES.length) return;
+  currentIdx = idx;
+  const s = SLIDES[idx];
+  document.getElementById('slideNum').textContent = idx + 1;
+  document.getElementById('slideTime').textContent = s.time;
+  document.getElementById('slideTitle').textContent = s.title;
+  document.getElementById('notesBody').innerHTML = s.notes
+    .split('\n\n')
+    .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`)
+    .join('');
+  const next = SLIDES[idx + 1];
+  document.getElementById('nextTitle').textContent = next ? next.title : '— end —';
+}
+
+// ── Iframe injection ────────────────────────────────────────────
+const OBSERVER_SCRIPT = `
+(function() {
+  if (window.__presenterObserverActive) return;
+  window.__presenterObserverActive = true;
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const obs = new IntersectionObserver(function(entries) {
+    let best = null, bestRatio = 0;
+    entries.forEach(function(e) {
+      if (e.intersectionRatio > bestRatio) { bestRatio = e.intersectionRatio; best = e.target; }
+    });
+    if (best && bestRatio > 0.2) {
+      window.top.postMessage({ type: 'presenterSlide', id: best.id }, '*');
+    }
+  }, { threshold: [0.2, 0.4, 0.6] });
+  slides.forEach(function(s) { obs.observe(s); });
+})();
+`;
+
+const slidesFrame = document.getElementById('slidesFrame');
+slidesFrame.addEventListener('load', function() {
+  try {
+    const script = slidesFrame.contentDocument.createElement('script');
+    script.textContent = OBSERVER_SCRIPT;
+    slidesFrame.contentDocument.head.appendChild(script);
+  } catch (e) {
+    console.warn('Presenter injection blocked (cross-origin or file:// protocol):', e.message);
+  }
+});
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.type === 'presenterSlide') {
+    const idx = parseInt(e.data.id.replace('s', ''), 10) - 1;
+    if (!isNaN(idx)) setSlide(idx);
+  }
+});
+
+// ── Keyboard: P focuses the slides iframe ──────────────────────
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'p' || e.key === 'P') {
+    slidesFrame.focus();
+    try { slidesFrame.contentWindow.focus(); } catch(_) {}
+  }
+});
+
+// ── Init ────────────────────────────────────────────────────────
+setSlide(0);
+updateTimerDisplay();
+</script>
+</body>
+</html>

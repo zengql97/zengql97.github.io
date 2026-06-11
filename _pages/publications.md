@@ -15,11 +15,14 @@ My research examines consumer behavior through unstructured data — text, image
 
 ## Conference Presentations
 
+- **Matching Influencer Visual Style to Brand Identity**  
+  ISMS Marketing Science Conference, June 2026 &nbsp;·&nbsp; [slides](/slides/mkt-sci-2026/flash_talk_public_web.html)
+
 - **Anchors' Voice Characteristics and Viewer Engagement in Live Streams**  
   EMAC 2026 · Digital Marketing & Social Media Track &nbsp;·&nbsp; [slides](/slides/emac-2026.html)
 
-- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
-  ISMS Marketing Science Conference, June 2023
-
 - **Image Distinctiveness**  
   ISMS Marketing Science Conference, June 2024
+
+- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
+  ISMS Marketing Science Conference, June 2023
