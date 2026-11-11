@@ -42,14 +42,25 @@ Dean's List (2017) · Minor: Finance
 Working papers available upon request.
 
 ### Conference Presentations
-- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
-  ISMS Marketing Science Conference, June 2023
+- **Matching Influencer Visual Style to Brand Identity**  
+  ISMS Marketing Science Conference, June 2026
+- **Anchors' Voice Characteristics and Viewer Engagement in Live Streams**  
+  EMAC 2026, Digital Marketing & Social Media Track
 - **Image Distinctiveness**  
   ISMS Marketing Science Conference, June 2024
+- **Role of Anchor Emotions on Audience Engagement and Revenue: Evidence from Live Streaming Audio and Video Analysis**  
+  ISMS Marketing Science Conference, June 2023
 
 ---
 
 ## Teaching
+
+### Instructor, Hebrew University of Jerusalem (HUJI), Israel
+- AI in Marketing, Master's seminar (2026–27)
+- Marketing Analytics, undergraduate (2026 – present)
+
+### Instructor, Singapore Management University (SMU), Singapore
+- Marketing Analytics, undergraduate (2024)
 
 ### Teaching Assistant, Singapore Management University (SMU), Singapore
 - Marketing Analytics (2022 – 2024)
