@@ -13,7 +13,7 @@ layout: default
 A research seminar on how artificial intelligence is transforming marketing and consumer behavior: personalization and algorithm aversion, chatbots, generative AI content, virtual influencers, disclosure, and the ethics of algorithmic marketing. Student groups design and carry out their own research project on AI in marketing.
 
 ### Fundamentals of Marketing
-*School of Business · Semester 1, 2026–27*
+*School of Business · Fall 2025 – present (three terms)*
 
 An introduction to the concepts, analyses, and decisions of marketing management: market analysis, consumer behavior, Customer Lifetime Value, segmentation, targeting and positioning, branding, and the marketing mix of product, price, place, and promotion. Students apply these frameworks through a case study and a group marketing program presentation.
 
