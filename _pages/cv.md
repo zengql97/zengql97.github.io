@@ -17,7 +17,7 @@ redirect_from:
 *July 2026 – present*  
 School of Business
 
-### Lecturer, Singapore Management University (SMU), Singapore
+### Graduate Instructor, Singapore Management University (SMU), Singapore
 *August 2024 – December 2024*  
 Undergraduate course: Marketing Analytics
 
@@ -59,7 +59,7 @@ Working papers available upon request.
 - AI in Marketing, Master's seminar (2026–27)
 - Fundamentals of Marketing (Fall 2025 – present)
 
-### Instructor, Singapore Management University (SMU), Singapore
+### Graduate Instructor, Singapore Management University (SMU), Singapore
 - Marketing Analytics, undergraduate (2024)
 
 ### Teaching Assistant, Singapore Management University (SMU), Singapore
