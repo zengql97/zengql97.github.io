@@ -57,7 +57,7 @@ Working papers available upon request.
 
 ### Instructor, Hebrew University of Jerusalem (HUJI), Israel
 - AI in Marketing, Master's seminar (2026–27)
-- Marketing Analytics, undergraduate (2026 – present)
+- Fundamentals of Marketing (2026–27)
 
 ### Instructor, Singapore Management University (SMU), Singapore
 - Marketing Analytics, undergraduate (2024)
